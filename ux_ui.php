@@ -3,42 +3,76 @@ include "header.php";
 ?>
 
 <body onload="PageLoader()">
+    <script>
+            $(function(){
+                $("#sidebarWrapper").load("sidebar.html");
+            });
+    </script>
 	<div id="wrapper">
-
+    
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <div id="sidebarWrapper">
         </div>
-        
-        <script>
-        $(function(){
-          $("#sidebar-wrapper").load("sidebar.html");
-        });
-        </script>
+
         <div class="prooverlay"></div>
-        <!-- /#sidebar-wrapper -->
+
+        <!-- /#sidebarWrapper -->
         <div id="loader"><span class="loader-inner"></span></div>
+
         <!-- Page Content -->
         <div id="page-content-wrapper" style="display:none;">
             <div class="fixheader">
                 <p class="header-title">OCEAN  FRIENDS</p>
             </div>
                 <div class="content-section">
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/835x400" alt=""class="proimg"></a>
-                    <h1>VeeR VR: Premium Immersive Entertainment</h1>
-                    <!-- <h2>ABSTRACT</h2> -->
-                    <p class="p">VeeR is a leading VR entertainment platform available worldwide, across all major VR headsets， web, and mobile. VeeR acquires, produces, and distributes best-in-class immersive stories and light-weight interactive experiences.</p>
-                    <h2>As the lead designer, I owned, deisgned and shipped the experience for
-                    </h2>
-                    <span class="label">Leads management</span>
-                    <span class="label">Reviews</span>
-                    <span class="label">Performance tracking</span>
-                    <p>Since our pilot program launched in 2015, both the platform and business has grown tremendously, I am proud to say we currently have the High Consumer Satisfaction Rate, High Provider Satisfaction Rate, High Provider Retention Rate, High Conversation Rate From SERP and Best-In-Class Overall User Experience.</p>
-                    <h2>Overview: From Home Services Ads to Local Services</h2>
-                    <p>The original Home Services Ads program was launched in Q3 2015 with the mission to connect customers with qualified home service providers while building a curated and monetized marketplace for both sides of the business. Since then, there has been a tremendous growth within our team. In Q4 2017, Google Home Services rebranded and expanded into more markets and verticals. Now, we are surfacing our services on multiple platforms and Google properties. Read more from the press and the Google Blog Post.</p>
-  
+                    <h1>UX UI Works</h1>
+                    <p class="p">To showcase some of my UX/UI works, mostly has been done during my master's study. I use tools including Adobe Creative Suites, Figma, Sketch, Flinto, Principle, Framer, InVision, Zeplin, Unity 3D etc.</p>
+                    <hr>
 
-                     <a href="https://placeholder.com"><img src="https://via.placeholder.com/835x400" alt=""class="proimg"></a>
+                    <h2>Filmily: Filmmaking Tool</h2>
+                    
+                    <img style="margin-top:0"src="imgs/uxui/filmily/1.jpg" alt=""class="proimg">
+                    <img src="imgs/uxui/filmily/2.jpg" alt=""class="proimg">
+                    <hr>
 
+                    <p>Case Study:</p>
+
+                    <div id="adobe-dc-view"style="width: 904px; height: 500px; margin-top: 32px; "></div>
+                    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+                    <script type="text/javascript">
+                        document.addEventListener("adobe_dc_view_sdk.ready", function()
+                        {
+                            var adobeDCView = new AdobeDC.View({clientId: "b3e423281d6a4e7ca29041093a927290", divId: "adobe-dc-view"});
+                            adobeDCView.previewFile(
+                            {
+                                content:   {location: {url: "imgs/pdf/Filmily_case study.pdf"}},
+                                metaData: {fileName: "Filmily Case Study.pdf"}
+                            },
+
+                            {showDownloadPDF: false}
+
+                            );
+                        });
+                    </script>
+                    
+                    
+                    <hr>
+                     
+                    <h2>Drux: Drug Interaction Checker</h2>
+                    <img src="imgs/uxui/drux/1.jpg" alt=""class="proimg">
+                    <img src="imgs/uxui/drux/3.jpg" alt=""class="proimg">
+                    <!-- <div class="img-grid" style="font-size:0;"> -->
+                        <img src="imgs/uxui/drux/2.jpg" alt=""class="proimg">
+                        <img src="imgs/uxui/drux/4.jpg" alt=""class="proimg">
+                    <!-- </div> -->
+                    <img src="imgs/uxui/drux/2-2.jpg" alt=""class="proimg">
+                    <hr>
+
+                    <h2>Sniff: Parcel Tracking</h2>
+                    <img src="imgs/uxui/sniff/1.gif" alt=""class="proimg">
+                    <img src="imgs/uxui/sniff/1.jpg" alt=""class="proimg">
+                    <img src="imgs/uxui/sniff/2.jpg" alt=""class="proimg">
+                    <img src="imgs/uxui/sniff/3.jpg" alt=""class="proimg">
 
                     <div id="footer">
                     </div>

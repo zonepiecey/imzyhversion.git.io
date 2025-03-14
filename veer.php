@@ -6,53 +6,146 @@ include "header.php";
 	<div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <div id="sidebarWrapper">
         </div>
         
         <script>
         $(function(){
-          $("#sidebar-wrapper").load("sidebar.html");
+          $("#sidebarWrapper").load("sidebar.html");
         });
         </script>
+
         <div class="prooverlay"></div>
-        <!-- /#sidebar-wrapper -->
+
+        <!-- /#sidebarWrapper -->
         <div id="loader"><span class="loader-inner"></span></div>
+
         <!-- Page Content -->
         <div id="page-content-wrapper" style="display:none;">
+
             <div class="fixheader">
-                <p class="header-title">OCEAN  FRIENDS</p>
+                <p class="header-title">VEER</p>
             </div>
+
                 <div class="content-section">
-                    <h1>VeeR VR: Premium Immersive Entertainment</h1>
-                    <!-- <h2>ABSTRACT</h2> -->
-                    <p class="p">veer是个啥VeeR is a VR entertainment platform available worldwide, across all major VR headsets， web, and mobile. VeeR acquires, produces, and distributes best-in-class immersive stories and light-weight interactive experiences. Our first mission is to create great experiences for VR headset users</p>
+                    <h1>VeeR VR: Designing for Immersive Storytelling</h1>
+                    <img src="imgs/veer/cover.jpg" alt=""class="proimg">
 
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/900x400" alt=""class="proimg"></a>
+                    <h2>The Challenge: Navigating the Unknown</h2>
+                    <p class="p">It was 2018, and VR was still a frontier. The hype was real, but the adoption? Not so much. VeeR VR had started as a community-driven platform, where anyone could upload VR content. It was a bold move—giving creators a space to share—but there was one major problem: user-generated content was inconsistent in quality, and VR headset adoption was slow. Viewers struggled to find engaging content, and as a result, engagement suffered.
+
+VeeR needed a shift. It wasn’t just about showcasing VR content; it was about creating a premium cinematic experience that kept users coming back. That’s where I came in. As a UX designer, my mission was to redefine how users discovered and consumed VR content in an emerging medium. The challenge? Make something new feel intuitive.</p>
+
+                    <hr>
+
+                    <h2>As the UX designer, I owned, designed and delivered the experience for:</h2>
+                    <span class="tag"><div class="tag-text">Research</div></span>
+                    <span class="tag"><div class="tag-text">Prototyping</div></span>
+                    <span class="tag"><div class="tag-text">Iteration</div></span>
+                    <span class="tag"><div class="tag-text">Design reviews</div></span>
+                    <span class="tag"><div class="tag-text">ROI</div></span>
+                    <span class="tag"><div class="tag-text">UI components managements</div></span>
+                    <span class="tag"><div class="tag-text">VR headset experience</div></span>
+                    <p>As the UX designer for the VR platform, I'm proud that since VeeR VR 2.0's launch in 2018, we have achieved high consumer satisfaction rates, strong user retention, and best-in-class overall user experience.</p>
+                    <img src="imgs/veer/rating.jpg" alt=""class="proimg">
+                    <hr>
+
+                    <!-- overview -->
+                    <h2>Overview: From Community to Platform</h2>
+
+                    <p>VeeR VR launched in 2017 as a VR community platform where creators could upload VR content for headset users to watch. However, due to limited VR headset adoption and lower UGC content quality in 2017-2018, we pivoted our focus to premium content when I joined in 2018. We began curating high-quality cinematic VR content and introduced a premium paid section on our platform.</p>
+                    <hr>
+
+                    <!-- feeds -->
+                    <h2>Feeds - Case Study</h2>
+
+                    <p>My first project was redesigning the Feeds section. User research indicated that users found the old Feeds cluttered and difficult to navigate. To reduce cognitive load, we evolved the Feeds design system. In the new version, content is organized by categories, and our machine learning-based recommendation system helps users discover content that matches their interests. This makes content exploration more intuitive in an immersive environment.</p>
+
+                    <p>
+                    As the result of this redesign,  the average number of content watched per session has inceased by <span style="color:black; font-weight:600"> 69.8% </span>
+                    and the average length of watch time per session has increased by <span style="color:black; font-weight:600">34.4% </span> comparing with old version.
+                    </p>
+                    <img src="imgs/veer/feeds.jpg" alt=""class="proimg">
                     
-                    <h2> As the UX designer, I owned, deisgned and shipped the experience for
-                    </h2>
-                    <span class="label">Leads management</span>
-                    <span class="label">Reviews</span>
-                    <span class="label">ROI</span>
-                    <span class="label">User research</span>
-                    <span class="label">UI components managements</span>
-                    <span class="label">Headset experience</span>
-                    <p>Since Veer 2.0 shipped in 2018, both the platform and business has grown tremendously, I joined the team of Veer VR, I am proud to say we currently have the High Consumer Satisfaction Rate, High Provider Satisfaction Rate, High Provider Retention Rate, High Conversation Rate From SERP and Best-In-Class Overall User Experience.</p>
 
-                    <h2>转型feeds 日活Overview: From the Community to Platform</h2>
+                    <h3>Goal</h3>
+                    <p>Increase App Engagement & User Retention.
+                    <!-- <ul style="font-size: 1em; -webkit-font-smoothing: antialiased; text-align: left; font-family: 'Poppins', sans-serif; font-weight: 400;color: rgba(0, 0, 0, .68);">
+                        <li>Increase the average number of content watched per session</li>
+                        <li>Increase the average length of watch time per session</li>
+                        <li>Shorten the time from entering the app to watching the first content</li></ul>
+                    </p> -->
 
-                    <p>The original Veer was lauched in 2016 with </p>
+                    <h3>Design Solution</h3>
+                    <img src="imgs/veer/solution.jpg" alt=""class="proimg-border">
 
-                    <p>Since our pilot program launched in 2015, both the platform and business has grown tremendously, I am proud to say we currently have the High Consumer Satisfaction Rate, High Provider Satisfaction Rate, High Provider Retention Rate, High Conversation Rate From SERP and Best-In-Class Overall User Experience.</p>
+                    <h3>Measure</h3>
+                    <img src="imgs/veer/measure.jpg" alt=""class="proimg-border">
 
-                    <h2>付费内容Overview: From Home Services Ads to Local Services</h2>
-                    <p>The original Home Services Ads program was launched in Q3 2015 with the mission to connect customers with qualified home service providers while building a curated and monetized marketplace for both sides of the business. Since then, there has been a tremendous growth within our team. In Q4 2017, Google Home Services rebranded and expanded into more markets and verticals. Now, we are surfacing our services on multiple platforms and Google properties. Read more from the press and the Google Blog Post.</p>
+                    <h3>Data Analysis</h3>
+                    <img src="imgs/veer/data_entry.jpg" alt=""class="proimg-border">
+
                     
-                    <h2>用户研究Overview: From Home Services Ads to Local Services</h2>
-                    <p>The original Home Services Ads program was launched in Q3 2015 with the mission to connect customers with qualified home service providers while building a curated and monetized marketplace for both sides of the business. Since then, there has been a tremendous growth within our team. In Q4 2017, Google Home Services rebranded and expanded into more markets and verticals. Now, we are surfacing our services on multiple platforms and Google properties. Read more from the press and the Google Blog Post.</p>
+
+                    
+                    <h3>New Structure</h3>
+                    <p>Rearranged navigation level to put well-performed entry at first place. The new information architecture:
+                    </p>
+                    <img src="imgs/veer/IA.jpg" alt=""class="proimg">
+
+                    <img src="imgs/veer/before-after.jpg" alt=""class="proimg">
+                    
+                    <h3>Environment</h3>
+                    <p>The previous veer land (the purple background on the back of the UI) was not VR friendly, many users feel it's too bright that causes eye strain. Another problem is the old veer land was not works well with the UI in terms of visual hierarchy and design aesthetics.
+                    </p><p>
+                    So at the end of feeds redesign, I prototyped a new background scene in Unity:
+                    </p>
+                    
+                    <img src="imgs/veer/scene.jpg" alt=""class="proimg">
+                    <img src="imgs/veer/feeds.jpg" alt=""class="proimg">
+
+
+
+                    <hr>
+
+                    <!-- Bookmark -->
+                    <h2>Bookmark: Connecting Mobile and VR Experiences</h2>
+
+                    <p>Our user research revealed distinct usage patterns between VR headsets and mobile devices. VR headsets present several challenges:<br>
+                    - Limited comfort for extended wear<br>
+                    - Potential motion sickness<br>
+                    - Weight considerations, even with standalone headsets<br>
+                    - Limited mobility, primarily used at home<br>
+                    - Restricted usage duration<br>
+                    </p>
+                    <p>To address these limitations, we developed a cross-platform Bookmark system. Users can save content through our website or mobile app, which syncs to their VR app under the same account. This allows users to quickly access their saved content when they return to their VR headset.</p>
+                    <img src="imgs/veer/bookmark_empty.jpg" alt=""class="proimg">
+                    <hr>
+
+
+                    <!-- Paid content -->
+                    <h2>Paid Content</h2>
+                    <p>In late 2018 we introduced a paid section on our platform. It was our first try for monetization, the model was pay-per-view for cinematic content.</p>
+                    <img src="imgs/veer/paid content.jpg" alt=""class="proimg">
+                    <hr>
+                    
+                    <!-- Player -->
+                    <h2>Player: Up Next Optimization</h2>
+                    <p>Making decision results in cognitive load. Desirable browsing behavior needs to be primed by default options you set for them. At the end of each watch section, we did some optimization to display some relavent content to our user, based on algorithm.</p>
+                    <img src="imgs/veer/player.jpg" alt=""class="proimg">
+                    <hr>
+                    
+                    <!-- VR experience -->
+                    <h2>VR experience optimization</h2>
+                    <p>It's all about User. We did many user experience optimazaiton: add voice input; toggle UI based on controller tracking during video playing; add trailer for paid content; 360 panorama image background preview in content details page; etc.</p>
+                    <hr>
+
+                    <!-- research -->
+                    <h2>Research and Collaboration</h2>
+                    <p>Our design and research teams maintain continuous dialogue with users through regular testing and validation. We also host the annual VeeR Creator Conference, bringing together outstanding global VR content creators to exchange ideas and production experiences.</p>
   
 
-                     <a href="https://placeholder.com"><img src="https://via.placeholder.com/835x400" alt=""class="proimg"></a>
+                     <img src="imgs/veer/meetup.png" alt=""class="proimg">
 
 
                     <div id="footer">

@@ -1,28 +1,51 @@
-    <div id="sidebar_logo">
+<!--     <div id="sidebar_logo">
         <a href="index.php">
-            <img src="imgs/logo_1.png" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.23 74.23"><defs><style>.cls-1{fill:none;stroke-miterlimit:10;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><rect class="cls-1" x="4.11" y="4.11" width="66" height="66"/><polyline class="cls-1" points="4.11 51.94 39.35 51.94 47.72 41.79 55.18 51.94 70.11 51.94"/></g></g></svg>
         </a>
+    </div> -->
+    <div id="home" class="sidebar-link"><a id="arrow"href="index.php">  &larr;</a><a id="hometext"href="index.php">home</a></div>
+    <div class="label">    
+        <span class="labelWork">Work</span>
     </div>
-
     <ul class="sidebar-nav">
+
         <li>
-            <a class="prolist" href="Veer.php"><div class="dot dot3"></div><p class="protitle protitle3">Veer</p></a>
+            <a class="prolist" href="veer.php"><div class="dot dot1"></div><p class="protitle protitle3">Veer</p></a>
         </li>
         <li>
-            <a class="prolist" href="acro.php"><div class="dot dot9"></div><p class="protitle protitle9">Acro</p></a>
+            <a class="prolist" href="pwc.php"><div class="dot dot2"></div><p class="protitle protitle9">Acro</p></a>
         </li>
         <li>
-            <a class="prolist" href="ux_ui.php"><div class="dot dot9"></div><p class="protitle protitle9">UX/UI Wroks</p></a>
+            <a class="prolist" href="ux_ui.php"><div class="dot dot3"></div><p class="protitle protitle9">UX/UI Wroks</p></a>
         </li>
         <li>
-            <a class="prolist" href="vr.php"><div class="dot dot1"></div><p class="protitle protitle1">Virtual Reality</p></a>
+            <a class="prolist" href="vr.php"><div class="dot dot4"></div><p class="protitle protitle1">Virtual Reality</p></a>
         </li>
         <li>
-            <a class="prolist" href="coding.php"><div class="dot dot2"></div><p class="protitle protitle2">Coding</p></a>
+            <a class="prolist" href="coding.php"><div class="dot dot5"></div><p class="protitle protitle2">Coding</p></a>
         </li>
         </li>
     </ul>
-    <div id="about"><a href="about.php">ABOUT</a></div>
+    <div id="about" class="sidebar-link"><a href="about.php">ABOUT</a></div>
+
+    <script>
+        const sidebar = document.getElementById("sidebarWrapper");
+        const links = document.querySelectorAll(".sidebar-link");
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("hovered");
+            });
+        });
+
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.classList.add("hovered");
+        });
+
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.classList.remove("hovered");
+        });
+    </script>
 
     
 
