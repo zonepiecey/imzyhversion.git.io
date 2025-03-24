@@ -69,24 +69,7 @@
     </ul>
     <div id="about" class="sidebar-link"><a href="about.php">ABOUT</a></div>
 
-    <script>
-        const sidebar = document.getElementById("sidebarWrapper");
-        const links = document.querySelectorAll(".sidebar-link");
-
-        links.forEach(link => {
-            link.addEventListener("click", () => {
-                sidebar.classList.remove("hovered");
-            });
-        });
-
-        sidebar.addEventListener("mouseenter", () => {
-            sidebar.classList.add("hovered");
-        });
-
-        sidebar.addEventListener("mouseleave", () => {
-            sidebar.classList.remove("hovered");
-        });
-    </script>
+    
         <div class="prooverlay"></div>
         <!-- /#sidebarWrapper -->
 
@@ -332,5 +315,23 @@
 
 
       </script>
+      <script>
+        const sidebar = document.getElementById("sidebarWrapper");
+        const links = document.querySelectorAll(".sidebar-link");
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("hovered");
+            });
+        });
+
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.classList.add("hovered");
+        });
+
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.classList.remove("hovered");
+        });
+    </script>
 </body>
 </html>
