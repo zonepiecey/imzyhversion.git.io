@@ -1,7 +1,16 @@
 <?php
 include "header.php";
 ?>
-
+<head>
+  <style>
+    #sidebarWrapper {
+      background-color: transparent;
+    }
+    #home {
+      visibility: hidden;
+    }
+  </style>
+</head>
 <body onload="PageLoader()">
 	<div id="wrapper">
 
@@ -23,7 +32,7 @@ include "header.php";
         <div id="page-content-wrapper" style="display:none;">
         
               <!-- canvas -->
-              <div class="section" id="canvas">
+              <div class="container-fluid" id="canvas">
   
 
               <div id="landingText">
@@ -39,47 +48,20 @@ include "header.php";
                 
               </div>
                   
-              <canvas id="dotgrid"></canvas>
-              
-                  <!-- <div id="logo_3">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.23 74.23"><defs><style>.cls-1{fill:none;stroke-miterlimit:10;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><rect class="cls-1" x="4.11" y="4.11" width="66" height="66"/><polyline class="cls-1" points="4.11 51.94 39.35 51.94 47.72 41.79 55.18 51.94 70.11 51.94"/></g></g></svg>
-                  </div> -->
-                  
-                  <!-- <img id="logo_3" src="imgs/logo_3.png" alt=""> -->
-                  <!-- <img class="dot_group" src="imgs/dot_group.png" alt=""> -->
+              <canvas id="dotgrid"></canvas>\
                   
                   
               </div>
               <!-- /canvas -->
-              
-              <!-- #container-fluid -->
-              <div class="container-fluid">
+                <!-- #container-fluid 2 -->
+                <div class="container-fluid" data-trigger="true">
 
-                      <div class="about-section">
-                          
-                        <p id="display1">
-                              Hi! I'm Lumi, a <span style="color:#0100c6; font-weight:600">designer</span> delivering smart interaction and delightful user experience.<br><br>
-                              If you believe we can do something amazingly together, 
-                              <br>
-                              <a href="mailto:zh1gy2g0@gmail.com?Subject=Hello Ying!" target="_top"><span style="font-weight:600; text-decoration: underline #0100c6; text-decoration-thickness: 6px;">drop me a line</span>!</a>
-                          </p>
+                </div>
+                <!-- /#container-fluid 2-->
+                              <!-- #container-fluid -->
+             
 
-                      </div>
-
-                      <div class="icons">
-                              <a href="mailto:zh1gy2g0@gmail.com?Subject=Hello" target="_top"><i class="fas fa-paper-plane" style="font-size:24px;color:#0000CA;"></i></a>
-                              
-                              <a href="http://www.linkedin.com/in/ying-zhang-5430a9114"><i class="fab fa-linkedin-in" style="font-size:26px;color:#0000CA;"></i></a>
-                      </div>
-
-              </div>
-              <!-- /#container-fluid -->
-
-              <!-- #container-fluid 2 -->
-              <div class="container-fluid" data-trigger="true">
-
-              </div>
-              <!-- /#container-fluid 2-->
+            
           
 
           </div>
@@ -91,18 +73,7 @@ include "header.php";
 
     <!-- Menu Toggle Script -->
     <script>
-            x = $("#logo_2");
-            y = $("#logo_3");
-            $("#wrapper").on("mousemove", function(t) {
-                var a = -($(window).innerWidth() / 2 - t.pageX) / 10,
-                    b = ($(window).innerHeight() / 2 - t.pageY) / -16;
-                    c = ($(window).innerWidth() / 2 - t.pageX) / -40;
-                    d = ($(window).innerHeight() / 2 - t.pageY) / -50;
-  
-                y.attr("style", "transform: translateX(" + a + "px) translateY(" + b + "px);-webkit-transform: translateX(" + a + "px) translateY(" + b + "px);-moz-transform: translateX(" + a + "px) translateY(" + b + "px)")
-                x.attr("style", "transform: translateX(" + c + "px) translateY(" + d + "px);-webkit-transform: translateX(" + c + "px) translateY(" + d + "px);-moz-transform: translateX(" + c + "px) translateY(" + d + "px)")
-            })
-
+           
 
             // Get the canvas element by its ID
             var canvas = document.getElementById('dotgrid'),
@@ -244,10 +215,27 @@ include "header.php";
                 };
             })();
 
+            // Initialize a flag to control rendering
+            let isHovering = false;
+
+            // Get the sidebarWrapper element
+            const sidebarWrapper = document.getElementById('sidebarWrapper');
+
+            // Add event listeners for mouse enter and leave on the sidebar
+            sidebarWrapper.addEventListener('mouseenter', function() {
+                isHovering = true; // Set flag to true when hovering
+            });
+
+            sidebarWrapper.addEventListener('mouseleave', function() {
+                isHovering = false; // Set flag to false when not hovering
+            });
+
             // Animation loop to continuously render the canvas
             (function animloop() {
-              requestAnimFrame(animloop);
-              render();
+                requestAnimFrame(animloop);
+                if (!isHovering) { // Only render if not hovering
+                    render();
+                }
             })();
 
             // Function to calculate the distance between two points
@@ -261,8 +249,6 @@ include "header.php";
 
     <!-- Show side bar when scroll -->
     <script>
-
-      const sidebarWrapper = document.getElementById('sidebarWrapper'); // Ensure the correct ID
       const triggerSection = document.querySelector('.container-fluid[data-trigger]');
 
       function handleScroll() {
