@@ -28,7 +28,16 @@ include "header.php";
             </div>
 
                 <div class="content-section">
+                    <h1>Leading Design at PwC</h1>
+                    <p class="p">PwC Talent Exchange is an online marketplace where independent contractors and freelancers can find project-based work with PwC (PricewaterhouseCoopers). It connects skilled professionals—such as consultants, analysts, and specialists—with PwC teams that need expertise on a temporary basis.
+
+Key Features:
+Freelance & Contract Work – Offers short-term and project-based opportunities.
+Diverse Roles – Covers areas like consulting, technology, finance, and risk management.
+Flexibility – Allows professionals to work remotely or on-site, depending on the project.
+PwC Network – Provides access to PwC's global clients and teams.</p>
                     <h1>Redesigning the Engagement Manager Dashboard for PwC Talent Exchange</h1>
+
                     <p class="p">In 2023, PwC Talent Exchange's Engagement Manager Dashboard was becoming less efficient as the platform scaled. Engagement Managers were struggling to keep up with an increasing volume of roles, talent, and contractor engagements. The existing dashboard, although functional, was becoming overwhelming, with key data scattered across multiple sections and no clear focus on urgency.</p>
 
                     <p class="p">As the UX Design Lead, I was tasked with leading the redesign of this dashboard to make it more intuitive, actionable, and scalable. This project was not just about improving the user interface—it was about creating a strategic tool for managing a growing number of engagements while leading the cross-functional team through the entire process.</p>

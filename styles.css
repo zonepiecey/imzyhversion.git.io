@@ -5,24 +5,30 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: #f9f8f4;
+    background-color: #ffffff;
 }
 .about-section {
+    padding-left: 30%;
+    padding-top: 60px;
+    width: auto;
+    height: auto;
+}
+.section-content {
    display: block;
    margin: auto;
    width: 680px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);    
+   /* position: absolute; */
+   /* top: 50%; */
+   right: 100px;
+   /* transform: translate(-50%, -50%);     */
 
 }
 
 #display1 {
-    font-size: 2.4em;
+    font-size: 1em;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.9);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 #display1 a {
@@ -51,6 +57,7 @@ i {
 /* Homepage Styles --------------------------------------------------------*/
 #wrapper {
     height: 100%;
+    /* overflow-x: hidden; */
 }
 #canvas {
     display: block;
@@ -289,7 +296,7 @@ html, body {
     min-height: 500px;
     margin-left: -250px;
     overflow: hidden;
-    background: rgba(255, 255, 255, 1);
+    background: #ffffff;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -298,15 +305,9 @@ html, body {
 
 #sidebarWrapper.hovered {
     width: 560px;
+   background-color: #ffffff;
 }
 
-#sidebarWrapper.hovered #sidebar_logo {
-    stroke: black;
-}
-
-#sidebarWrapper.hovered #about a {
-    color: black;
-}
 
 #sidebarWrapper.hovered .labelWork {
     overflow: hidden;
@@ -328,13 +329,14 @@ html, body {
         font-weight: 800;
         text-transform: initial;
         margin-left: 30px;
-        top: 6%;
+        top: 8%;
         transform: rotate(0deg);
     }
 }
 
 .prooverlay {
-    background-color: black;
+    background-image: radial-gradient(rgb(230, 230, 230) 1px, rgb(247, 247, 247) 0);
+    background-size: 6px 6px;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -349,12 +351,10 @@ html, body {
     opacity: 1;
 }
 
-#sidebarWrapper.hovered ~ #page-content-wrapper .content-section {
-    transform: translateX(220px);
-}
 
-#sidebarWrapper.hovered ~ #page-content-wrapper .section {
-    transform: translateX(220px);
+#sidebarWrapper.hovered ~ #page-content-wrapper {
+    /* transform: translateX(480px); */
+    opacity: 0;
 }
 
 #sidebarWrapper.hovered #home a {
@@ -364,7 +364,7 @@ html, body {
     -webkit-transition: all 0.6s ease;
 }
 
-#sidebarWrapper.hovered .protitle {
+#sidebarWrapper.hovered .protitle, #sidebarWrapper.hovered .time {
     visibility: visible;
     -webkit-animation: show 0.5s ease-in-out;
 }
@@ -375,12 +375,15 @@ html, body {
 }
 
 #page-content-wrapper {
-    overflow-x: clip;
     width: 100%;
     height: 100%;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-#home a {
+#hometext {
     cursor: pointer;
     width: 370px;
     visibility: hidden;
@@ -396,8 +399,20 @@ html, body {
 
 #home {
     position: absolute;
-    left: 30px;
+    left: 33px;
     top: 20px;
+}
+#arrow {cursor: pointer;
+    width: 370px;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    color: #636363;
+    z-index: 3000;          
 }
 
 .proline {
@@ -406,6 +421,7 @@ html, body {
     margin-left: 15px;
     border-top: 2px solid #1FEAFF;
 }
+
 /* Text Styles --------------------------------------------------------*/
 .protitle {
     margin: 0;
@@ -419,11 +435,23 @@ html, body {
     position: relative;
     line-height: 48px;
 }
+.time {
+    margin: 0;
+    right: 28px;
+    display: inline-block;
+    color: #6a6a6a;
+    font-weight: 700;
+    font-size: 2em;
+    font-family: 'Funnel Display', sans-serif;
+    text-align: right;
+    visibility: hidden;
+    position: absolute;
+    line-height: 48px;
+}
 
 .prolist:hover .protitle {
     opacity: 0.8;
 }
-
 .protitle::before {
     position: absolute;
     bottom: 10%;
@@ -496,8 +524,8 @@ html, body {
 
 .sidebar-nav {
     position: absolute;
-    top: 28%;
-    width: 360px;
+    top: 32%;
+    width: 460px;
     margin: 0;
     padding: 0;
     list-style: none;
