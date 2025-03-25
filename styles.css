@@ -259,10 +259,63 @@ ul li a {
     transform: skew(15deg);
 }
 
+.img-container {
+    text-align: center;
+}
+
 .proimg {
     position: relative;
     width: 100%;
     margin-top: 32px;
+}
+
+.proimg1 {
+    width: 50%;
+    /* 将图片宽度设为50% */
+    border: 0.5px solid #dddddd;
+    /* 添加0.5px浅灰色边框 */
+    display: block;
+    /* 将图片设为块级元素 */
+    margin-left: auto;
+    /* 左侧自动边距 */
+    margin-right: auto;
+    /* 右侧自动边距 */
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.proimg2 {
+    width: 48%;
+    /* 将图片宽度设为50% */
+    height: 400px;
+    border: 0.5px solid #dddddd;
+    /* 添加0.5px浅灰色边框 */
+    display: inline-block;
+    /* 将图片设为块级元素 */
+    margin-top: 60px;
+    margin-bottom: 60px;
+    object-fit: contain;
+    /* 保持图片纵横比 */
+    object-position: center;
+    /* 图片在容器内居中 */
+    background-color: white;
+}
+
+.proimg3 {
+    width: 32%;
+    /* 将图片宽度设为50% */
+    height: 400px;
+    border: 0.5px solid #dddddd;
+    /* 添加0.5px浅灰色边框 */
+    display: inline-block;
+    /* 将图片设为块级元素 */
+    margin-top: 60px;
+    margin-bottom: 60px;
+    object-fit: contain;
+    /* 保持图片纵横比 */
+    object-position: center;
+    /* 图片在容器内居中 */
+    background-color: white;
 }
 
 .proimg-border {

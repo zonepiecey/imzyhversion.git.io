@@ -27,6 +27,11 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102169249-1"></script>
     <script>
+        // 为所有图片添加 loading="lazy"
+        document.querySelectorAll('img').forEach(img => {
+            img.loading = "lazy";
+        });
+
         window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
@@ -105,28 +110,6 @@
 
                 <img style="margin-top:0" src="imgs/uxui/filmily/1.jpg" alt="" class="proimg">
                 <img src="imgs/uxui/filmily/2.jpg" alt="" class="proimg">
-                <hr>
-
-                <p>Case Study:</p>
-
-                <div id="adobe-dc-view" style="width: 904px; height: 500px; margin-top: 32px; "></div>
-                <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-                <script type="text/javascript">
-                    document.addEventListener("adobe_dc_view_sdk.ready", function () {
-                        var adobeDCView = new AdobeDC.View({ clientId: "b3e423281d6a4e7ca29041093a927290", divId: "adobe-dc-view" });
-                        adobeDCView.previewFile(
-                            {
-                                content: { location: { url: "imgs/pdf/Filmily_case study.pdf" } },
-                                metaData: { fileName: "Filmily Case Study.pdf" }
-                            },
-
-                            { showDownloadPDF: false }
-
-                        );
-                    });
-                </script>
-
-
                 <hr>
 
                 <h2>Drux: Drug Interaction Checker</h2>
