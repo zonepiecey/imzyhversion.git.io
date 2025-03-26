@@ -58,8 +58,15 @@ i {
 }
 
 /* Homepage Styles --------------------------------------------------------*/
+#dotgrid {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 #wrapper {
     height: 100%;
+    width: 100%;
     /* overflow-x: hidden; */
 }
 
@@ -142,12 +149,14 @@ i {
 }
 
 /* Project Styles --------------------------------------------------------*/
+* {
+    box-sizing: border-box;
+  }
 .content-section {
-    position: relative;
+    /* position: relative; */
     padding-top: 48px;
-    margin: auto;
-    transform: translateX(40px);
-    max-width: 904px;
+    margin-left: auto;
+    width: calc(100% - 90px);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -176,17 +185,21 @@ i {
 }
 
 h1 {
+    width: 66%;
+    margin: 20px auto;
     z-index: 1000;
     margin-bottom: 32px;
     line-height: 80px;
     margin-top: 0px;
-    font-size: 3.2em;
+    font-size: 3em;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.9);
     font-family: 'Funnel Display', sans-serif;
 }
 
 h2 {
+    width: 66%;
+    margin: 20px auto;
     margin-bottom: 16px;
     line-height: 1.6;
     font-size: 1.4em;
@@ -196,6 +209,8 @@ h2 {
 }
 
 h3 {
+    width: 66%;
+    margin: auto;
     margin-top: 80px;
     margin-bottom: 8px;
     line-height: 1.6;
@@ -215,6 +230,7 @@ hr {
 }
 
 p {
+    width: 66%;
     color: rgba(0, 0, 0, 1);
     font-size: 1em;
     line-height: 1.4em;
@@ -229,16 +245,21 @@ p {
 }
 
 ul li {
+    width: 66%;
+    margin: auto;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: rgba(0, 0, 0, .68);
+    color: rgba(0, 0, 0, 1);
     -webkit-font-smoothing: antialiased;
 }
 
 ul li a {
     text-decoration: none;
 }
-
+.tagbox{
+    width: 66%;
+    margin:auto;
+}
 .tag {
     display: inline-block;
     font-size: .9em;
@@ -264,9 +285,11 @@ ul li a {
 }
 
 .proimg {
-    position: relative;
-    width: 100%;
+    /* position: relative; */
+    display: block;
+    width: 66%;
     margin-top: 32px;
+    margin: auto;
 }
 
 .proimg1 {
@@ -319,9 +342,10 @@ ul li a {
 }
 
 .proimg-border {
-    position: relative;
-    width: 100%;
-    margin-top: 24px;
+    /* position: relative; */
+    display: block;
+    width: 66%;
+    margin: 20px auto;
     border: 1px solid rgb(224, 224, 224);
 }
 
@@ -342,11 +366,14 @@ iframe {
 }
 
 /* Sidebar Styles --------------------------------------------------------*/
-html,
-body {
-    height: 100%;
-    margin: 0;
+html {
+  scrollbar-gutter: stable; /* 预留滚动条空间，避免布局偏移 */
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 确保 body 撑满视口 */
+  }
 
 #wrapper {
     transition: all 0.5s ease;
@@ -517,6 +544,7 @@ body {
 
 /* Text Styles --------------------------------------------------------*/
 .protitle {
+    width: auto;
     margin: 0;
     margin-left: 46px;
     display: inline-block;
@@ -734,7 +762,7 @@ body {
     vertical-align: top;
     display: inline-block;
     width: 100%;
-    background-color: #0100c6;
+    background-color: #000000;
     animation: loader-inner 2s infinite ease-in;
 }
 

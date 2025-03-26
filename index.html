@@ -168,9 +168,9 @@
 
     // Add an event listener for window resize
     window.addEventListener('resize', function () {
-      let size = window.innerWidth;
+      let size1 = window.innerWidth;
       let size2 = window.innerHeight;
-      dotgrid.width = size;
+      dotgrid.width = size1;
       dotgrid.height = size2;
       // Call setup function to initialize points
       setup();
@@ -198,6 +198,7 @@
       var rw = cw / w;
       var rh = ch / h;
 
+  
       // Loop through each row and column to create points
       for (var y = 0; y < rh; y++) {
         for (var x = 0; x < rw; x++) {
