@@ -215,7 +215,7 @@ hr {
 }
 
 p {
-    color: rgba(0, 0, 0, .68);
+    color: rgba(0, 0, 0, 1);
     font-size: 1em;
     line-height: 1.4em;
     text-align: left;
