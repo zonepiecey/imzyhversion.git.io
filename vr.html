@@ -92,6 +92,10 @@
                 <p class="header-title">Explore</p>
             </div>
             <div class="content-section">
+                <div class="gallery">
+                </div>
+            </div>
+            <div class="content-section">
                 <h1>Virtual Reallity Projects</h1>
                 <p>I’m a big fan of the way that VR can already enhance lives far beyond a mere gaming experience. I've
                     been designing for VR since 2017. Here are some projects I have done.</p>
@@ -244,7 +248,34 @@
             <footer>
                 <p class="copyr">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
             </footer>
+            <!-- <script>
+                // 假设图片命名为 image1.jpg, image2.jpg... 共60张（6列x10张）
+                const columnCount = 6;
+                const imagesPerColumn = 10;
+                const gallery = document.querySelector('.gallery');
+                
+                // 清空现有内容（如果模板中有示例图片）
+                gallery.innerHTML = '';
+                
+                // 动态生成列和图片
+                for (let col = 1; col <= columnCount; col++) {
+                  const column = document.createElement('div');
+                  column.className = 'column';
+                  
+                  for (let i = 1; i <= imagesPerColumn; i++) {
+                    // 计算图片序号（列1:1-10，列2:11-20...）
+                    const imgNum = (col - 1) * imagesPerColumn + i;
+                    const img = document.createElement('img');
+                    img.src = `imgs/collection/image${imgNum}.jpg`;
+                    img.alt = `Image ${imgNum}`;
+                    column.appendChild(img);
+                  }
+                  
+                  gallery.appendChild(column);
+                }
+              </script> -->
             <script>
+                
                 // 为所有图片添加 loading="lazy"
                 document.querySelectorAll('img').forEach(img => {
                     img.loading = "lazy";
