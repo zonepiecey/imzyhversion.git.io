@@ -127,6 +127,10 @@
       </div>
       <!-- /canvas -->
       <!-- #container-fluid 2 -->
+      <div>
+        <div class="gallery">
+        </div>
+      </div>
       <div class="container-fluid" data-trigger="true">
 
       </div>
@@ -142,7 +146,49 @@
   </div>
   <!-- /#wrapper -->
 
-
+  <script>
+    const columnCount = 6;
+    const imagesPerColumn = 6;
+    const totalImages = columnCount * imagesPerColumn;
+    const gallery = document.querySelector('.gallery');
+    
+    // 清空现有内容
+    gallery.innerHTML = '';
+    
+    // 创建包含所有图片序号的数组
+    let imageNumbers = Array.from({length: totalImages}, (_, i) => i + 1);
+    
+    // Fisher-Yates 洗牌算法来随机打乱数组
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+    
+    // 打乱图片序号数组
+    imageNumbers = shuffleArray(imageNumbers);
+    
+    // 动态生成列和图片
+    for (let col = 1; col <= columnCount; col++) {
+        const column = document.createElement('div');
+        column.className = 'column';
+        
+        for (let i = 1; i <= imagesPerColumn; i++) {
+            // 使用打乱后的数组来获取图片序号
+            const index = (col - 1) * imagesPerColumn + i - 1;
+            const imgNum = imageNumbers[index];
+            
+            const img = document.createElement('img');
+            img.src = `imgs/collection/image${imgNum}.jpg`;
+            img.alt = `Image ${imgNum}`;
+            column.appendChild(img);
+        }
+        
+        gallery.appendChild(column);
+    }
+</script>
 
   <!-- Menu Toggle Script -->
   <script>
