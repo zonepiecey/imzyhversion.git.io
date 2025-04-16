@@ -24,15 +24,14 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102169249-1"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'UA-102169249-1');
+
+        gtag('config', 'G-285GS6SF4R');
     </script>
 </head>
 
@@ -91,7 +90,7 @@
             <div class="fixheader">
                 <p class="header-title">Explore</p>
             </div>
-            
+
             <div class="content-section">
                 <h1>Virtual Reallity Projects</h1>
                 <p>I'm a big fan of the way that VR can already enhance lives far beyond a mere gaming experience. I've
@@ -250,13 +249,13 @@
                 const imagesPerColumn = 6;
                 const totalImages = columnCount * imagesPerColumn;
                 const gallery = document.querySelector('.gallery');
-                
+
                 // 清空现有内容
                 gallery.innerHTML = '';
-                
+
                 // 创建包含所有图片序号的数组
-                let imageNumbers = Array.from({length: totalImages}, (_, i) => i + 1);
-                
+                let imageNumbers = Array.from({ length: totalImages }, (_, i) => i + 1);
+
                 // Fisher-Yates 洗牌算法来随机打乱数组
                 function shuffleArray(array) {
                     for (let i = array.length - 1; i > 0; i--) {
@@ -265,31 +264,31 @@
                     }
                     return array;
                 }
-                
+
                 // 打乱图片序号数组
                 imageNumbers = shuffleArray(imageNumbers);
-                
+
                 // 动态生成列和图片
                 for (let col = 1; col <= columnCount; col++) {
                     const column = document.createElement('div');
                     column.className = 'column';
-                    
+
                     for (let i = 1; i <= imagesPerColumn; i++) {
                         // 使用打乱后的数组来获取图片序号
                         const index = (col - 1) * imagesPerColumn + i - 1;
                         const imgNum = imageNumbers[index];
-                        
+
                         const img = document.createElement('img');
                         img.src = `imgs/collection/image${imgNum}.jpg`;
                         img.alt = `Image ${imgNum}`;
                         column.appendChild(img);
                     }
-                    
+
                     gallery.appendChild(column);
                 }
             </script>
             <script>
-                
+
                 // 为所有图片添加 loading="lazy"
                 document.querySelectorAll('img').forEach(img => {
                     img.loading = "lazy";
