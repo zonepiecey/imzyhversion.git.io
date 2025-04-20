@@ -1,29 +1,43 @@
+// 用于存储页面加载器的定时器ID
 var myVar;
 
+// 页面加载器函数 - 在页面加载时调用
+// 作用：控制页面加载动画和内容的显示
 function PageLoader() {
+    // 立即执行showPage函数（timeout设为0）
     myVar = setTimeout(showPage, 0);
 }
 
+// 显示页面内容的函数
+// 作用：隐藏加载动画，显示实际页面内容
 function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("page-content-wrapper").style.display = "block";
+    // 隐藏加载动画元素
+    document.getElementById("loader").style.display = "none";
+    // 显示页面主要内容
+    document.getElementById("page-content-wrapper").style.display = "block";
 }
 
+// 禁用整个窗口的拖拽功能
+// 作用：防止用户拖拽页面元素
 window.ondragstart = function() { return false; } 
 
+// 当文档加载完成后执行
 $(document).ready(function() {
-  $("img").on("contextmenu",function(){
-     return false;
-  }); 
+    // 禁用所有图片的右键菜单
+    // 作用：防止用户右键保存图片
+    $("img").on("contextmenu",function(){
+        return false;
+    }); 
 
-  $("pdf").on("contextmenu",function(){
-     return false;
-  }); 
-
+    // 禁用所有PDF的右键菜单
+    // 作用：防止用户右键操作PDF文件
+    $("pdf").on("contextmenu",function(){
+        return false;
+    }); 
 }); 
 
 
-// ... existing code ...
+
 
 // Check and apply lazy loading to images
 $(document).ready(function() {
@@ -59,4 +73,3 @@ $(document).ready(function() {
   }
 });
 
-// ... existing code ...
