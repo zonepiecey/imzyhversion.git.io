@@ -236,6 +236,7 @@ h2 {
     width: 66%;
     margin: 20px auto;
     margin-bottom: 16px;
+    margin-top: 30px;
     line-height: 1.6;
     font-size: 1.4em;
     font-weight: 500;
@@ -326,6 +327,10 @@ ul li a {
     width: 66%;
     margin-top: 32px;
     margin: auto;
+}
+
+.pwc-feature-shot {
+    margin: 20px auto;
 }
 
 .proimg1 {
@@ -1021,5 +1026,140 @@ html, body {
         top: 13%;
         left: 45%;
         width: 180px;
+    }
+}
+
+.page-protect-scroll-lock {
+    overflow: hidden;
+}
+
+.page-protect-locked #page-content-wrapper {
+    visibility: hidden;
+}
+
+.page-protect-gate {
+    position: fixed;
+    inset: 0 0 0 80px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94)),
+        linear-gradient(135deg, rgba(238, 241, 245, 0.9), rgba(248, 246, 240, 0.96));
+    backdrop-filter: blur(18px);
+    transition: inset 0.5s ease;
+}
+
+.page-protect-card {
+    width: min(100%, 440px);
+    padding: 40px 32px 32px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s ease;
+}
+
+.page-protect-gate.sidebar-hovered {
+    inset: 0 0 0 560px;
+}
+
+.page-protect-gate.sidebar-hovered .page-protect-card {
+    transform: translateX(80px);
+}
+
+.page-protect-eyebrow {
+    margin: 0 0 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font: 600 12px/1.4 "Inter", sans-serif;
+    color: rgba(0, 0, 0, 0.48);
+}
+
+.page-protect-title {
+    width: 100%;
+    margin: 0 0 12px;
+    font: 700 36px/1.05 "Funnel Display", sans-serif;
+    color: rgba(0, 0, 0, 0.92);
+}
+
+.page-protect-copy {
+    width: 100%;
+    margin: 0 0 28px;
+    font: 400 15px/1.7 "Inter", sans-serif;
+    color: rgba(0, 0, 0, 0.68);
+}
+
+.page-protect-label {
+    display: block;
+    margin-bottom: 10px;
+    font: 600 13px/1.4 "Inter", sans-serif;
+    color: rgba(0, 0, 0, 0.72);
+}
+
+.page-protect-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    background: #ffffff;
+    font: 500 15px/1.4 "Inter", sans-serif;
+    color: rgba(0, 0, 0, 0.88);
+}
+
+.page-protect-input:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.06);
+}
+
+.page-protect-error {
+    min-height: 22px;
+    margin: 12px 0 0;
+    font: 500 13px/1.4 "Inter", sans-serif;
+    color: #b42318;
+}
+
+.page-protect-actions {
+    margin-top: 8px;
+}
+
+.page-protect-button {
+    width: 100%;
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 18px;
+    background: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    font: 600 15px/1 "Inter", sans-serif;
+}
+
+.page-protect-button:hover {
+    background: #2a2a2a;
+}
+
+@media (max-width: 640px) {
+    .page-protect-gate {
+        inset: 0;
+    }
+
+    .page-protect-gate.sidebar-hovered {
+        inset: 0;
+    }
+
+    .page-protect-gate.sidebar-hovered .page-protect-card {
+        transform: none;
+    }
+
+    .page-protect-card {
+        padding: 32px 22px 24px;
+        border-radius: 20px;
+    }
+
+    .page-protect-title {
+        font-size: 30px;
     }
 }

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FintechAI_Lumi</title>
+    <meta name="author" content="Ying Zhang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imgs/logo_1.svg" type="image/png">
+
+    <!-- Stylesheets -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-285GS6SF4R');
+    </script>
+
+    <style>
+        .proimg {
+            border: 0.5px solid #dddddd;
+            /* 添加0.5px浅灰色边框 */
+        }
+
+        .slides-fan-section {
+            width: 66%;
+            margin: 160px auto 72px;
+        }
+
+        .slides-fan-frame {
+            position: relative;
+            min-height: 860px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            overflow: visible;
+            padding: 180px 0 72px;
+        }
+
+        .slides-fan-card {
+            position: absolute;
+            left: 0;
+            bottom: 24px;
+            width: 100%;
+            border-radius: 22px;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.16);
+            transform-origin: left bottom;
+            transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 420ms ease;
+        }
+
+        .slides-fan-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .slides-fan-card.is-base {
+            z-index: 1;
+            transform: rotate(10deg);
+        }
+
+        .slides-fan-card.is-middle {
+            z-index: 2;
+            transform: rotate(-5deg);
+        }
+
+        .slides-fan-card.is-top {
+            z-index: 3;
+            transform: rotate(-20deg);
+        }
+
+        .slides-fan-frame:hover .slides-fan-card.is-base {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+            transition-delay: 0ms;
+        }
+
+        .slides-fan-frame:hover .slides-fan-card.is-middle {
+            transform: translateY(-24px) rotate(-5deg);
+            box-shadow: 0 32px 66px rgba(0, 0, 0, 0.2);
+            transition-delay: 60ms;
+        }
+
+        .slides-fan-frame:hover .slides-fan-card.is-top {
+            transform: translateY(-38px) rotate(-20deg);
+            box-shadow: 0 34px 72px rgba(0, 0, 0, 0.22);
+            transition-delay: 120ms;
+        }
+
+        @media (max-width: 1000px) {
+            .slides-fan-frame {
+                min-height: 700px;
+                padding: 140px 0 56px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .slides-fan-section {
+                width: 66%;
+                margin: 96px auto 48px;
+            }
+
+            .slides-fan-frame {
+                min-height: 420px;
+                padding: 88px 0 32px;
+            }
+
+            .slides-fan-card {
+                bottom: 16px;
+                width: 100%;
+                border-radius: 16px;
+            }
+
+            .slides-fan-card.is-base {
+                transform: rotate(8deg);
+            }
+
+            .slides-fan-card.is-middle {
+                transform: rotate(-4deg);
+            }
+
+            .slides-fan-card.is-top {
+                transform: rotate(-16deg);
+            }
+
+            .slides-fan-frame:hover .slides-fan-card.is-base {
+                transform: translateY(-8px) rotate(8deg);
+            }
+
+            .slides-fan-frame:hover .slides-fan-card.is-middle {
+                transform: translateY(-16px) rotate(-4deg);
+            }
+
+            .slides-fan-frame:hover .slides-fan-card.is-top {
+                transform: translateY(-24px) rotate(-16deg);
+            }
+        }
+    </style>
+</head>
+
+<body onload="PageLoader()">
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebarWrapper">
+            <div id="home" class="sidebar-link"><a id="arrow" href="index.html"> &ltrif;</a><a id="hometext"
+                    href="index.html">HOME</a></div>
+            <div class="label">
+                <span class="labelWork">Work</span>
+            </div>
+            <ul class="sidebar-nav">
+
+                <li>
+                    <a class="prolist" href="fintech-ai.html">
+                        <div class="dot dot5"></div>
+                        <p class="protitle protitle9">Fintech AI</p>
+                        <p class="time">2025-Now</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc.html">
+                        <div class="dot dot2"></div>
+                        <p class="protitle protitle9">PwC</p>
+                        <p class="time">2021-2024</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="veer.html">
+                        <div class="dot dot1"></div>
+                        <p class="protitle protitle3">Veer</p>
+                        <p class="time">2018-2020</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="apple.html">
+                        <div class="dot dot3"></div>
+                        <p class="protitle protitle9">Apple</p>
+                        <p class="time">2017-2018</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="vr.html">
+                        <div class="dot dot4"></div>
+                        <p class="protitle protitle1">Explore</p>
+                        <p class="time"><span>&infin;</span></p>
+                    </a>
+                </li>
+                <li>
+                    <!-- <a class="prolist" href="coding.php"><div class="dot dot5"></div><p class="protitle protitle2">Coding</p></a> -->
+                </li>
+                </li>
+            </ul>
+            <div id="about" class="sidebar-link"><a href="about.html">ABOUT</a></div>
+        </div>
+
+        <div class="prooverlay"></div>
+
+        <!-- /#sidebarWrapper -->
+        <div id="loader"><span class="loader-inner"></span></div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" style="display:none;">
+
+            <div class="fixheader">
+                <p class="header-title">FINTECH AI</p>
+            </div>
+
+            <div class="content-section">
+                <h1>Designing a Fintech AI Experience</h1>
+                <img src="imgs/fintech/slides/Slide_001.png" loading="lazy" alt="" class="proimg">
+                <h2>About</h2>
+                <p class="p">Corgi Labs is a YC-backed startup building a payments intelligence platform that helps businesses improve payment performance, reduce fraud, and grow revenue.</p>
+                <h2>Project Overview</h2>
+                <p class="p">This project explored how one product could serve very different types of businesses, including ecommerce, subscription SaaS, AI SaaS, and financial institutions. Through research, I found that these customers were not solving the same payments problem, which led to a clearer product structure: one modular platform with different paths to value by segment.</p>
+                <h2>Case Study Focus</h2>
+                <p class="p">My focus was on product definition and structure. I looked at how different business models defined success, where value showed up first, and how the platform should be organized so each segment could quickly understand where to start.</p>
+                <hr>
+                <h2>My Role</h2>
+                <div class="tagbox">
+                    <span class="tag">
+                        <div class="tag-text">Leadership</div>
+                    </span>
+                    <span class="tag">
+                        <div class="tag-text">UX Strategy</div>
+                    </span>
+                    <span class="tag">
+                        <div class="tag-text">Stakeholder Management</div>
+                    </span>
+                    <span class="tag">
+                        <div class="tag-text">User Research</div>
+                    </span>
+                    <span class="tag">
+                        <div class="tag-text">Design System</div>
+                    </span>
+                    <span class="tag">
+                        <div class="tag-text">Prototyping</div>
+                    </span>
+                    <span class="tag">
+                        <div class="tag-text">Implementation</div>
+                    </span>
+                </div>
+                <hr>
+                <section class="slides-fan-section">
+                    <div class="slides-fan-frame">
+                        <figure class="slides-fan-card is-base">
+                            <img src="imgs/fintech/slides/Slide_004.png" loading="lazy" alt="Fintech AI slide 2">
+                        </figure>
+                        <figure class="slides-fan-card is-middle">
+                            <img src="imgs/fintech/slides/Slide_002.png" loading="lazy" alt="Fintech AI slide 3">
+                        </figure>
+                        <figure class="slides-fan-card is-top">
+                            <img src="imgs/fintech/slides/Slide_003.png" loading="lazy" alt="Fintech AI slide 4">
+                        </figure>
+                    </div>
+                </section>
+            <footer>
+                <p class="copyr">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
+            </footer>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <script>
+        const sidebar = document.getElementById("sidebarWrapper");
+        const links = document.querySelectorAll(".sidebar-link");
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("hovered");
+            });
+        });
+
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.classList.add("hovered");
+        });
+
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.classList.remove("hovered");
+        });
+    </script>
+    <!-- /#wrapper -->
+</body>
+
+</html>
