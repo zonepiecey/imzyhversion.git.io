@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CapAdmin_Lumi</title>
+    <meta name="author" content="Ying Zhang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="imgs/logo_1.svg" type="image/png">
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+        <script src="js/locales.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/language-toggle.js" defer></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-285GS6SF4R');
+    </script>
+
+    <style>
+        .proimg {
+            border: 0.5px solid #dddddd;
+        }
+    </style>
+</head>
+
+<body onload="PageLoader()">
+    <div id="wrapper">
+        <div id="sidebarWrapper">
+            <div id="home" class="sidebar-link"><a id="arrow" href="index.html"> &ltrif;</a><a id="hometext"
+                    href="index.html" data-i18n="nav.home">HOME</a></div>
+            <div class="label">
+                <span class="labelWork" data-i18n="nav.work">Work</span>
+            </div>
+            <ul class="sidebar-nav">
+                <li>
+                    <a class="prolist" href="fintech-ai.html">
+                        <div class="dot dot5"></div>
+                        <p class="protitle protitle9">CorgiLabs</p>
+                        <p class="time">Fintech AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-capadmin.html">
+                        <div class="dot dot2"></div>
+                        <p class="protitle protitle9" data-i18n="nav.capadmin">CapAdmin</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-chatgpt.html">
+                        <div class="dot dot6"></div>
+                        <p class="protitle protitle9" data-i18n="nav.chatgpt">ChatGPT++</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-talent-exchange.html">
+                        <div class="dot dot7"></div>
+                        <p class="protitle protitle9" data-i18n="nav.talent">Talent Exchange</p>
+                        <p class="time">Enterprise</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="veer.html">
+                        <div class="dot dot1"></div>
+                        <p class="protitle protitle3" data-i18n="nav.veer">Veer</p>
+                        <p class="time">VR</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="vr.html">
+                        <div class="dot dot4"></div>
+                        <p class="protitle protitle1" data-i18n="nav.explore">Explore</p>
+                        <p class="time">Lab</p>
+                    </a>
+                </li>
+            </ul>
+            <div id="about" class="sidebar-link"><a href="about.html" data-i18n="nav.about">ABOUT</a></div>
+        </div>
+
+        <div class="prooverlay"></div>
+        <div id="loader"><span class="loader-inner"></span></div>
+
+        <div id="page-content-wrapper" style="display:none;">
+            <div class="fixheader">
+                <p class="header-title">CAPADMIN</p>
+            </div>
+
+            <div class="content-section case-study-page">
+                <section class="case-hero">
+                    <p class="case-eyebrow">PwC | Enterprise AI Platform | Product Design Lead</p>
+                    <h1>CapAdmin Intelligence Platform</h1>
+                    <p class="case-lede">I designed a modular intelligence platform that helped consulting teams access data assets, automation pipelines, taxonomies, NLP methods, algorithms, and reusable analytical libraries from one coherent product experience.</p>
+                    <div class="case-meta-grid">
+                        <div>
+                            <span>Role</span>
+                            <strong>Lead Product Designer</strong>
+                        </div>
+                        <div>
+                            <span>Domain</span>
+                            <strong>Enterprise AI, data operations, analytics tooling</strong>
+                        </div>
+                        <div>
+                            <span>Users</span>
+                            <strong>Consultants, data scientists, analysts, solution teams</strong>
+                        </div>
+                        <div>
+                            <span>Scope</span>
+                            <strong>Information architecture, workflows, UI system, handoff</strong>
+                        </div>
+                    </div>
+                    <figure class="case-figure case-figure-wide">
+                        <img src="imgs/pwc/capadmin/landing.png" loading="lazy" alt="CapAdmin platform module landing page">
+                        <figcaption>CapAdmin was structured as a modular platform rather than a single-purpose dashboard.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2>The Problem</h2>
+                    <p>PwC teams were working with a growing ecosystem of data assets, automation scripts, taxonomies, NLP methods, algorithm patterns, and notebook-based analytical work. The problem was not a lack of capability. The problem was that the capability was fragmented.</p>
+                    <p>Different teams needed to answer the same operational questions repeatedly: Where is the right data source? Which taxonomy supports this use case? What automation is running? Which model pattern can be reused? Where is the design or technical documentation? Without a shared product structure, knowledge discovery depended on tribal memory and handoffs.</p>
+                    <div class="case-insight-grid">
+                        <div>
+                            <span>01</span>
+                            <h3>Fragmented entry points</h3>
+                            <p>Users had to move between repositories, spreadsheets, automation logs, and expert conversations to find the right asset.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <h3>Mixed mental models</h3>
+                            <p>Consultants thought in business modules and use cases; data teams thought in pipelines, sources, methods, and model artifacts.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <h3>High trust requirements</h3>
+                            <p>The platform needed to make provenance, status, revision, ownership, and documentation visible enough for enterprise use.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Design Strategy</h2>
+                    <p>My design approach was to make CapAdmin behave like an operating layer for intelligence work: a place where business modules, data assets, taxonomies, NLP methods, algorithm patterns, and notebooks could be discovered through a consistent navigation model.</p>
+                    <p>Instead of treating every module as a separate product, I defined a repeatable module grammar: overview, searchable inventory, structured table, documentation, status, and action. This let very different technical objects feel familiar without forcing them into the same interface.</p>
+                    <figure class="case-figure">
+                        <img src="imgs/pwc/capadmin/data-catalogue.png" loading="lazy" alt="CapAdmin data catalogue table interface">
+                        <figcaption>Data Catalogue used dense tables, search, column controls, and pagination to support enterprise-scale metadata review.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2>Information Architecture</h2>
+                    <p>The first major design decision was to create a left navigation system organized around capability families, not organizational ownership. This helped users build a map of the platform around the work they were trying to do: manage taxonomies, inspect data fabric, review automation, explore NLP outputs, find algorithms, or open reusable notebooks.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/taxonomies-home.png" loading="lazy" alt="CapAdmin taxonomies category page">
+                            <figcaption>Taxonomies became a visible knowledge library, grouped by domain categories such as Events, Financials, Fraud, Geo, Regulatory, and Risk.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/taxonomies-dataset.png" loading="lazy" alt="CapAdmin taxonomy dataset table">
+                            <figcaption>Inside a taxonomy, users could switch from category browsing into dataset-level operations, comments, and column control.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Key Design Decisions</h2>
+                    <div class="case-decision-list">
+                        <div>
+                            <h3>1. Separate discovery from operations</h3>
+                            <p>Landing and category pages were designed for orientation. Tables were designed for operational review. This reduced cognitive load by keeping browsing, validation, and action in distinct modes.</p>
+                        </div>
+                        <div>
+                            <h3>2. Use tables where density is the feature</h3>
+                            <p>For data assets and NLP outputs, I leaned into structured tables instead of card layouts. Analysts needed comparison, sorting, metadata, and scan efficiency more than visual decoration.</p>
+                        </div>
+                        <div>
+                            <h3>3. Make documentation a product surface</h3>
+                            <p>Design docs and Jupyter libraries were not hidden as secondary files. They were represented as first-class tabs and libraries, reinforcing trust and maintainability.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Data Fabric</h2>
+                    <p>Data Fabric was the operational core: a place to connect public and private data sources, monitor automation processes, review outputs, and understand where data moved through the platform.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/data-sources.png" loading="lazy" alt="CapAdmin data sources interface">
+                            <figcaption>Data Sources made source inventory visible, searchable, and connected to downstream use.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/automation-processes.png" loading="lazy" alt="CapAdmin automation processes visual analytics interface">
+                            <figcaption>Automation Processes balanced status visibility with analytical chart exploration.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>NLP and Algorithm Workflows</h2>
+                    <p>The platform also needed to expose machine-learning capabilities in a way that non-specialists could understand while still supporting expert review. I treated NLP methods and algorithm patterns as reusable capability libraries with consistent states, tabs, and documentation paths.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/nlp-method.png" loading="lazy" alt="CapAdmin NLP semantics method table">
+                            <figcaption>NLP Semantics supported model output review across classification, named entity extraction, RDF triples, reputation, sentiment, and topic extraction.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/algorithm-process.png" loading="lazy" alt="CapAdmin algorithm library process diagram">
+                            <figcaption>The Algorithm Library translated technical processes into a shared business and technical perspective.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Reusable Intelligence Assets</h2>
+                    <p>One of the most important design shifts was treating notebooks, algorithms, and documentation as reusable product assets. This supported repeatable delivery across client work, while giving teams a clearer way to discover what already existed before building from scratch.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/algorithm-patterns.png" loading="lazy" alt="CapAdmin algorithm patterns interface">
+                            <figcaption>Algorithm patterns organized reusable methods by learning pattern, causality, and use-case fit.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/capadmin/jupyter-library.png" loading="lazy" alt="CapAdmin Jupyter library interface">
+                            <figcaption>The Jupyter Library made notebook assets searchable with revision and publish-date metadata.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Outcome</h2>
+                    <p>The final design established a scalable product language for CapAdmin: consistent navigation, repeatable module patterns, searchable inventories, operational tables, visible documentation, and clear bridges between business use cases and technical artifacts.</p>
+                    <p>For a senior design role, the value of this work was not only the screen design. It was creating a platform structure that could absorb new data sources, taxonomies, algorithms, and analytical libraries without requiring every team to reinvent the interface.</p>
+                    <div class="case-outcome-grid">
+                        <div>
+                            <span>System clarity</span>
+                            <p>Unified fragmented intelligence capabilities into a navigable platform model.</p>
+                        </div>
+                        <div>
+                            <span>Operational confidence</span>
+                            <p>Surfaced status, documentation, source, revision, and ownership signals where users needed them.</p>
+                        </div>
+                        <div>
+                            <span>Reusable scale</span>
+                            <p>Created patterns that could support new modules without redesigning the product from scratch.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <p class="copyr" data-i18n="common.footer">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const sidebar = document.getElementById("sidebarWrapper");
+        const links = document.querySelectorAll(".sidebar-link");
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("hovered");
+            });
+        });
+
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.classList.add("hovered");
+        });
+
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.classList.remove("hovered");
+        });
+    </script>
+</body>
+
+</html>

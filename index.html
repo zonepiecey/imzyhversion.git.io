@@ -6,6 +6,7 @@
   <title>Home_Lumi</title>
   <meta name="author" content="Ying Zhang" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="imgs/logo_1.svg" type="image/png">
@@ -23,6 +24,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
+  <script src="js/locales.js"></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/language-toggle.js" defer></script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
@@ -51,53 +55,56 @@
     <!-- Sidebar -->
     <div id="sidebarWrapper">
       <div id="home" class="sidebar-link"><a id="arrow" href="index.html"> &ltrif;</a><a id="hometext"
-          href="index.html">HOME</a></div>
+          href="index.html" data-i18n="nav.home">HOME</a></div>
       <div class="label">
-        <span class="labelWork">Work</span>
+        <span class="labelWork" data-i18n="nav.work">Work</span>
       </div>
       <ul class="sidebar-nav">
 
         <li>
           <a class="prolist" href="fintech-ai.html">
             <div class="dot dot5"></div>
-            <p class="protitle protitle9">Fintech AI</p>
-            <p class="time">2025-Now</p>
+            <p class="protitle protitle9">CorgiLabs</p>
+            <p class="time">Fintech AI</p>
           </a>
         </li>
         <li>
-          <a class="prolist" href="pwc.html">
+          <a class="prolist" href="pwc-capadmin.html">
             <div class="dot dot2"></div>
-            <p class="protitle protitle9">PwC</p>
-            <p class="time">2021-2024</p>
+            <p class="protitle protitle9" data-i18n="nav.capadmin">CapAdmin</p>
+            <p class="time">Enterprise AI</p>
+          </a>
+        </li>
+        <li>
+          <a class="prolist" href="pwc-chatgpt.html">
+            <div class="dot dot6"></div>
+            <p class="protitle protitle9" data-i18n="nav.chatgpt">ChatGPT++</p>
+            <p class="time">Enterprise AI</p>
+          </a>
+        </li>
+        <li>
+          <a class="prolist" href="pwc-talent-exchange.html">
+            <div class="dot dot7"></div>
+            <p class="protitle protitle9" data-i18n="nav.talent">Talent Exchange</p>
+            <p class="time">Enterprise</p>
           </a>
         </li>
         <li>
           <a class="prolist" href="veer.html">
             <div class="dot dot1"></div>
-            <p class="protitle protitle3">Veer</p>
-            <p class="time">2018-2020</p>
-          </a>
-        </li>
-        <li>
-          <a class="prolist" href="apple.html">
-            <div class="dot dot3"></div>
-            <p class="protitle protitle9">Apple</p>
-            <p class="time">2017-2018</p>
+            <p class="protitle protitle3" data-i18n="nav.veer">Veer</p>
+            <p class="time">VR</p>
           </a>
         </li>
         <li>
           <a class="prolist" href="vr.html">
             <div class="dot dot4"></div>
-            <p class="protitle protitle1">Explore</p>
-            <p class="time"><span>&infin;</span></p>
+            <p class="protitle protitle1" data-i18n="nav.explore">Explore</p>
+            <p class="time">Lab</p>
           </a>
         </li>
-        <li>
-          <!-- <a class="prolist" href="coding.php"><div class="dot dot5"></div><p class="protitle protitle2">Coding</p></a> -->
-        </li>
-        </li>
       </ul>
-      <div id="about" class="sidebar-link"><a href="about.html">ABOUT</a></div>
+      <div id="about" class="sidebar-link"><a href="about.html" data-i18n="nav.about">ABOUT</a></div>
     </div>
 
     <div class="prooverlay"></div>
@@ -114,24 +121,141 @@
 
 
         <div id="landingText">
-          <p id="text1">Hey!</p>
-          <p id="text2">I'm Lumi,</p>
-          <p id="text3">a digital product designer specializing in innovative interactions, systemic design, and UX
+          <p id="text1" data-i18n="home.hey">Hey!</p>
+          <p id="text2" data-i18n="home.imLumi">I'm Lumi,</p>
+          <p id="text3" data-i18n="home.tagline">a digital product designer specializing in innovative interactions, systemic design, and UX
             frameworks.</p>
           <div id="slogan">
-            <p class="text4">Exploring</p>
-            <p class="text4">Creating</p>
-            <p class="text4">Designing</p>
-            <p class="text4">with Joy.</p>
+            <p class="text4" data-i18n="home.exploring">Exploring</p>
+            <p class="text4" data-i18n="home.creating">Creating</p>
+            <p class="text4" data-i18n="home.designing">Designing</p>
+            <p class="text4" data-i18n="home.withJoy">with Joy.</p>
           </div>
 
         </div>
 
-        <canvas id="dotgrid"></canvas>\
+        <canvas id="dotgrid"></canvas>
 
 
       </div>
       <!-- /canvas -->
+      <section class="home-work" aria-labelledby="home-work-title">
+        <div class="home-work-header">
+          <p class="home-kicker" data-i18n="home.kicker">Selected case studies</p>
+          <h2 id="home-work-title" data-i18n="home.title">Scroll through the work</h2>
+        </div>
+
+        <div class="home-project-list">
+          <article class="home-project-card">
+            <div class="home-project-copy">
+              <div class="home-project-meta">
+                <span>2025-2026</span>
+                <span>Fintech AI</span>
+                <span data-i18n="home.tagAI">AI</span>
+                <span data-i18n="home.tagStrategy">Strategy</span>
+                <span data-i18n="home.tagDesign">Design</span>
+              </div>
+              <h3 data-i18n="home.fintechTitle">Designing a Fintech AI Experience</h3>
+              <p data-i18n="home.fintechDesc">Corgi Labs is a payments intelligence platform for improving payment performance, reducing fraud, and growing revenue across different business segments.</p>
+              <a class="home-project-link" href="fintech-ai.html" data-i18n="common.viewProject">View Project</a>
+            </div>
+            <div class="home-project-media">
+              <img src="imgs/fintech/slides/Slide_001.png" alt="Fintech AI product case study preview" loading="lazy">
+            </div>
+          </article>
+
+          <article class="home-project-card">
+            <div class="home-project-copy">
+              <div class="home-project-meta">
+                <span>2024</span>
+                <span>PwC</span>
+                <span data-i18n="home.tagEnterpriseUx">Enterprise UX</span>
+                <span data-i18n="home.tagAnalytics">Analytics</span>
+                <span data-i18n="home.tagAiPlatform">AI Platform</span>
+              </div>
+              <h3 data-i18n="home.capadminTitle">CapAdmin Intelligence Platform</h3>
+              <p data-i18n="home.capadminDesc">A connected enterprise platform bringing NLP workflows, data ingestion, automation monitoring, source management, and algorithm exploration into one unified product experience.</p>
+              <a class="home-project-link" href="pwc-capadmin.html" data-i18n="common.viewProject">View Project</a>
+            </div>
+            <div class="home-project-media">
+              <img src="imgs/pwc/cap/Automation Processes-1.png" alt="CapAdmin Intelligence Platform preview" loading="lazy">
+            </div>
+          </article>
+
+          <article class="home-project-card">
+            <div class="home-project-copy">
+              <div class="home-project-meta">
+                <span>2023-2024</span>
+                <span>PwC</span>
+                <span data-i18n="home.tagGenerativeAi">Generative AI</span>
+                <span data-i18n="home.tagTemplates">Templates</span>
+                <span data-i18n="home.tagCollaboration">Collaboration</span>
+              </div>
+              <h3 data-i18n="home.chatgptTitle">PwC ChatGPT++</h3>
+              <p data-i18n="home.chatgptDesc">A unified enterprise AI platform that combines chat, templates, plugins, team collaboration, and workspace customization into one seamless product experience.</p>
+              <a class="home-project-link" href="pwc-chatgpt.html" data-i18n="common.viewProject">View Project</a>
+            </div>
+            <div class="home-project-media">
+              <img src="imgs/pwc/chatgpt/Home-Updated.png" alt="PwC ChatGPT++ platform preview" loading="lazy">
+            </div>
+          </article>
+
+          <article class="home-project-card">
+            <div class="home-project-copy">
+              <div class="home-project-meta">
+                <span>2021-2024</span>
+                <span>PwC</span>
+                <span data-i18n="home.tagMarketplace">Marketplace</span>
+                <span data-i18n="home.tagResearch">Research</span>
+                <span data-i18n="home.tagDesignSystem">Design System</span>
+              </div>
+              <h3 data-i18n="home.talentTitle">Talent Exchange</h3>
+              <p data-i18n="home.talentDesc">A mission-critical marketplace and engagement manager dashboard redesign for sourcing talent, managing contracts, tracking onboarding, and turning operational complexity into clarity.</p>
+              <a class="home-project-link" href="pwc-talent-exchange.html" data-i18n="common.viewProject">View Project</a>
+            </div>
+            <div class="home-project-media">
+              <img src="imgs/pwc/cover.png" alt="PwC Talent Exchange case study preview" loading="lazy">
+            </div>
+          </article>
+
+          <article class="home-project-card">
+            <div class="home-project-copy">
+              <div class="home-project-meta">
+                <span>2018-2020</span>
+                <span>VeeR VR</span>
+                <span data-i18n="home.tagVR">VR</span>
+                <span data-i18n="home.tagDiscovery">Discovery</span>
+                <span data-i18n="home.tagMobile">Mobile</span>
+              </div>
+              <h3 data-i18n="home.veerTitle">Designing for Immersive Storytelling</h3>
+              <p data-i18n="home.veerDesc">A VR platform redesign focused on premium content discovery, cross-device bookmarking, player flows, and immersive viewing behavior.</p>
+              <a class="home-project-link" href="veer.html" data-i18n="common.viewProject">View Project</a>
+            </div>
+            <div class="home-project-media">
+              <img src="imgs/veer/cover.jpg" alt="VeeR VR case study preview" loading="lazy">
+            </div>
+          </article>
+
+          <article class="home-project-card">
+            <div class="home-project-copy">
+              <div class="home-project-meta">
+                <span data-i18n="home.tagInfinite">Infinite</span>
+                <span data-i18n="nav.explore">Explore</span>
+                <span data-i18n="home.tagVR">VR</span>
+                <span data-i18n="home.tagUxUi">UX/UI</span>
+                <span data-i18n="home.tagCode">Code</span>
+              </div>
+              <h3 data-i18n="home.vrTitle">Virtual Reality, UX/UI, and Design + Code</h3>
+              <p data-i18n="home.vrDesc">A collection of immersive projects, student work, front-end experiments, generative visuals, and Three.js studies.</p>
+              <a class="home-project-link" href="vr.html" data-i18n="common.viewProject">View Project</a>
+            </div>
+            <div class="home-project-media">
+              <img src="imgs/vr/everythingflows/cover.jpg" alt="Explore project collection preview" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </section>
+
       <!-- #container-fluid 2 -->
       <div>
         <div class="gallery">

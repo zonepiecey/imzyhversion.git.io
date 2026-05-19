@@ -6,6 +6,7 @@
     <title>FintechAI_Lumi</title>
     <meta name="author" content="Ying Zhang" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="imgs/logo_1.svg" type="image/png">
@@ -23,6 +24,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+        <script src="js/locales.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/language-toggle.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
@@ -109,10 +113,44 @@
             transition-delay: 120ms;
         }
 
+        .case-study-page .slides-fan-section {
+            width: min(760px, 76%);
+            margin: 72px auto 96px;
+            padding: 0;
+        }
+
+        .case-study-page .slides-fan-frame {
+            min-height: 620px;
+            padding: 96px 12% 96px;
+            overflow: hidden;
+        }
+
+        .case-study-page .slides-fan-card {
+            left: 12%;
+            bottom: 96px;
+            width: 76%;
+        }
+
         @media (max-width: 1000px) {
             .slides-fan-frame {
                 min-height: 700px;
                 padding: 140px 0 56px;
+            }
+
+            .case-study-page .slides-fan-section {
+                width: min(680px, 78%);
+                margin: 64px auto 80px;
+            }
+
+            .case-study-page .slides-fan-frame {
+                min-height: 540px;
+                padding: 84px 10% 84px;
+            }
+
+            .case-study-page .slides-fan-card {
+                left: 10%;
+                bottom: 84px;
+                width: 80%;
             }
         }
 
@@ -156,6 +194,24 @@
             .slides-fan-frame:hover .slides-fan-card.is-top {
                 transform: translateY(-24px) rotate(-16deg);
             }
+
+            .case-study-page .slides-fan-section {
+                width: 82%;
+                margin: 52px auto 68px;
+                padding: 0;
+            }
+
+            .case-study-page .slides-fan-frame {
+                min-height: 360px;
+                padding: 56px 10% 56px;
+                overflow: hidden;
+            }
+
+            .case-study-page .slides-fan-card {
+                left: 10%;
+                bottom: 56px;
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -166,53 +222,56 @@
         <!-- Sidebar -->
         <div id="sidebarWrapper">
             <div id="home" class="sidebar-link"><a id="arrow" href="index.html"> &ltrif;</a><a id="hometext"
-                    href="index.html">HOME</a></div>
+                    href="index.html" data-i18n="nav.home">HOME</a></div>
             <div class="label">
-                <span class="labelWork">Work</span>
+                <span class="labelWork" data-i18n="nav.work">Work</span>
             </div>
             <ul class="sidebar-nav">
 
                 <li>
                     <a class="prolist" href="fintech-ai.html">
                         <div class="dot dot5"></div>
-                        <p class="protitle protitle9">Fintech AI</p>
-                        <p class="time">2025-Now</p>
+                        <p class="protitle protitle9">CorgiLabs</p>
+                        <p class="time">Fintech AI</p>
                     </a>
                 </li>
                 <li>
-                    <a class="prolist" href="pwc.html">
+                    <a class="prolist" href="pwc-capadmin.html">
                         <div class="dot dot2"></div>
-                        <p class="protitle protitle9">PwC</p>
-                        <p class="time">2021-2024</p>
+                        <p class="protitle protitle9" data-i18n="nav.capadmin">CapAdmin</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-chatgpt.html">
+                        <div class="dot dot6"></div>
+                        <p class="protitle protitle9" data-i18n="nav.chatgpt">ChatGPT++</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-talent-exchange.html">
+                        <div class="dot dot7"></div>
+                        <p class="protitle protitle9" data-i18n="nav.talent">Talent Exchange</p>
+                        <p class="time">Enterprise</p>
                     </a>
                 </li>
                 <li>
                     <a class="prolist" href="veer.html">
                         <div class="dot dot1"></div>
-                        <p class="protitle protitle3">Veer</p>
-                        <p class="time">2018-2020</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="prolist" href="apple.html">
-                        <div class="dot dot3"></div>
-                        <p class="protitle protitle9">Apple</p>
-                        <p class="time">2017-2018</p>
+                        <p class="protitle protitle3" data-i18n="nav.veer">Veer</p>
+                        <p class="time">VR</p>
                     </a>
                 </li>
                 <li>
                     <a class="prolist" href="vr.html">
                         <div class="dot dot4"></div>
-                        <p class="protitle protitle1">Explore</p>
-                        <p class="time"><span>&infin;</span></p>
+                        <p class="protitle protitle1" data-i18n="nav.explore">Explore</p>
+                        <p class="time">Lab</p>
                     </a>
                 </li>
-                <li>
-                    <!-- <a class="prolist" href="coding.php"><div class="dot dot5"></div><p class="protitle protitle2">Coding</p></a> -->
-                </li>
-                </li>
             </ul>
-            <div id="about" class="sidebar-link"><a href="about.html">ABOUT</a></div>
+            <div id="about" class="sidebar-link"><a href="about.html" data-i18n="nav.about">ABOUT</a></div>
         </div>
 
         <div class="prooverlay"></div>
@@ -227,56 +286,206 @@
                 <p class="header-title">FINTECH AI</p>
             </div>
 
-            <div class="content-section">
-                <h1>Designing a Fintech AI Experience</h1>
-                <img src="imgs/fintech/slides/Slide_001.png" loading="lazy" alt="" class="proimg">
-                <h2>About</h2>
-                <p class="p">Corgi Labs is a YC-backed startup building a payments intelligence platform that helps businesses improve payment performance, reduce fraud, and grow revenue.</p>
-                <h2>Project Overview</h2>
-                <p class="p">This project explored how one product could serve very different types of businesses, including ecommerce, subscription SaaS, AI SaaS, and financial institutions. Through research, I found that these customers were not solving the same payments problem, which led to a clearer product structure: one modular platform with different paths to value by segment.</p>
-                <h2>Case Study Focus</h2>
-                <p class="p">My focus was on product definition and structure. I looked at how different business models defined success, where value showed up first, and how the platform should be organized so each segment could quickly understand where to start.</p>
-                <hr>
-                <h2>My Role</h2>
-                <div class="tagbox">
-                    <span class="tag">
-                        <div class="tag-text">Leadership</div>
-                    </span>
-                    <span class="tag">
-                        <div class="tag-text">UX Strategy</div>
-                    </span>
-                    <span class="tag">
-                        <div class="tag-text">Stakeholder Management</div>
-                    </span>
-                    <span class="tag">
-                        <div class="tag-text">User Research</div>
-                    </span>
-                    <span class="tag">
-                        <div class="tag-text">Design System</div>
-                    </span>
-                    <span class="tag">
-                        <div class="tag-text">Prototyping</div>
-                    </span>
-                    <span class="tag">
-                        <div class="tag-text">Implementation</div>
-                    </span>
-                </div>
-                <hr>
-                <section class="slides-fan-section">
-                    <div class="slides-fan-frame">
-                        <figure class="slides-fan-card is-base">
-                            <img src="imgs/fintech/slides/Slide_004.png" loading="lazy" alt="Fintech AI slide 2">
+            <div class="content-section case-study-page">
+                <section class="case-hero">
+                    <p class="case-eyebrow">Corgi Labs | Fintech AI | Product Design Lead</p>
+                    <h1>Designing a Payments Intelligence Platform</h1>
+                    <p class="case-lede">I designed a fintech AI experience for Corgi Labs, a payments intelligence platform that helps businesses understand payment performance, reduce fraud exposure, and identify revenue opportunities across different customer and product segments.</p>
+                    <div class="case-meta-grid">
+                        <div>
+                            <span>Role</span>
+                            <strong>Lead Product Designer</strong>
+                        </div>
+                        <div>
+                            <span>Domain</span>
+                            <strong>Payments, fraud, revenue intelligence, AI analytics</strong>
+                        </div>
+                        <div>
+                            <span>Users</span>
+                            <strong>Founders, finance teams, payment operations, risk teams</strong>
+                        </div>
+                        <div>
+                            <span>Scope</span>
+                            <strong>Product strategy, onboarding, dashboards, IA, UI system</strong>
+                        </div>
+                    </div>
+                    <figure class="case-figure case-figure-wide">
+                        <img src="imgs/fintech/slides/Slide_001.png" loading="lazy" alt="Corgi Labs fintech AI presentation cover">
+                        <figcaption>The opening visual direction framed Corgi Labs around payment intelligence, business growth, and a clear AI value proposition.</figcaption>
+                    </figure>
+                    <section class="slides-fan-section" aria-label="Fintech AI visual presentation slides">
+                        <div class="slides-fan-frame">
+                            <figure class="slides-fan-card is-base">
+                                <img src="imgs/fintech/slides/Slide_004.png" loading="lazy" alt="Fintech AI concept slide about payment intelligence">
+                            </figure>
+                            <figure class="slides-fan-card is-middle">
+                                <img src="imgs/fintech/slides/Slide_002.png" loading="lazy" alt="Fintech AI concept slide about product strategy">
+                            </figure>
+                            <figure class="slides-fan-card is-top">
+                                <img src="imgs/fintech/slides/Slide_003.png" loading="lazy" alt="Fintech AI concept slide about user segments">
+                            </figure>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="case-section">
+                    <h2>The Problem</h2>
+                    <p>Payment performance is not one problem. An ecommerce company may care about checkout approval and geographic distribution. A subscription business may care about churn, repeat purchase, and failed renewals. An AI SaaS product may need to separate legitimate growth from fraud risk. Financial institutions often need confidence, thresholds, reporting, and governance.</p>
+                    <p>The existing opportunity was bigger than a dashboard. Corgi Labs needed a product experience that could turn messy payment signals into clear business decisions: where revenue is leaking, why transactions decline, which customer segments matter, and when the AI model is ready to intervene.</p>
+                    <div class="case-insight-grid">
+                        <div>
+                            <span>01</span>
+                            <h3>Payments were fragmented</h3>
+                            <p>Users had to interpret approval, declines, disputes, methods, geography, revenue, and fraud from separate mental models.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <h3>AI required trust</h3>
+                            <p>The CORGI model needed clear qualification, training, data sync, and readiness states before users would rely on recommendations.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <h3>Segments needed different value paths</h3>
+                            <p>Different business types had different first moments of value, so the product could not depend on one generic onboarding or dashboard story.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Product Strategy</h2>
+                    <p>I reframed the product around a simple promise: higher acceptance, lower fraud, more revenue. The experience needed to help users move from setup to insight to action, while keeping the AI model understandable enough for payment and risk teams.</p>
+                    <p>The resulting structure separated the product into four layers: onboarding and qualification, analytics and insights, CORGI model readiness, and ongoing reporting. This allowed users to understand what the system knows, what it recommends, and what action they should take next.</p>
+                    <figure class="case-figure">
+                        <img src="imgs/fintech/onboarding flow/onboarding_Corgi model qualified.png" loading="lazy" alt="Corgi model qualification screen with setup timeline">
+                        <figcaption>Model readiness was treated as a workflow state, not a hidden technical process.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2>Onboarding and Qualification</h2>
+                    <p>The onboarding flow had to do more than collect account information. It had to communicate whether a business had enough transaction history, fraud examples, and volume to benefit from the model. This helped set the right expectations before users reached the analytics experience.</p>
+                    <p>I designed the setup flow around explicit states: sign up, connect data, choose a plan, qualify the CORGI model, and begin training. This made the AI adoption path feel concrete and reduced ambiguity around why some users could access model training immediately while others needed more data.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/onboarding flow/onboarding_Sign up.png" loading="lazy" alt="Corgi Labs sign-up screen with Stripe option and performance proof points">
+                            <figcaption>The sign-up experience paired conversion with credibility signals: approval rate, ARR, revenue lift, and investor/social proof.</figcaption>
                         </figure>
-                        <figure class="slides-fan-card is-middle">
-                            <img src="imgs/fintech/slides/Slide_002.png" loading="lazy" alt="Fintech AI slide 3">
-                        </figure>
-                        <figure class="slides-fan-card is-top">
-                            <img src="imgs/fintech/slides/Slide_003.png" loading="lazy" alt="Fintech AI slide 4">
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/onboarding flow/onboarding_Data sync in-progress.png" loading="lazy" alt="Corgi model data sync in-progress state">
+                            <figcaption>Data sync and model readiness states made the onboarding process transparent and operationally grounded.</figcaption>
                         </figure>
                     </div>
                 </section>
+
+                <section class="case-section">
+                    <h2>Information Architecture</h2>
+                    <p>The product needed to support both quick executive scanning and deeper analytical workflows. I organized the main navigation around user intent: overview, payments, customer and product behavior, revenue, fraud, and reports. Secondary areas such as payment control, the CORGI model, billing, settings, and account management were separated from daily analytics.</p>
+                    <p>This structure gave users a predictable map: start with the health of the business, then drill into the exact payment, customer, revenue, or risk dimension behind a change.</p>
+                    <figure class="case-figure">
+                        <img src="imgs/fintech/UI/Payments.png" loading="lazy" alt="Corgi Labs payments analytics page with funnel, payment performance, geography, and payment method analysis">
+                        <figcaption>Payments became the core diagnostic surface, combining funnel movement, authorization performance, decline reasons, geography, and method-level comparisons.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2>Designing for Decision Quality</h2>
+                    <p>A senior design challenge in analytics products is choosing what not to show first. The interface had to avoid becoming a wall of charts. I used insight cards, metric groups, tabs, filters, and progressive detail to help users move from signal to diagnosis.</p>
+                    <p>The overview page surfaced the four decision areas most likely to matter in a payments business: revenue growth, fraud protection, optimization opportunity, and system health. Each section then connected to a deeper page where users could inspect the underlying evidence.</p>
+                    <div class="case-decision-list">
+                        <div>
+                            <h3>1. Lead with business language</h3>
+                            <p>Instead of exposing raw payment data first, the overview framed insights around revenue, protection, optimization, and system health.</p>
+                        </div>
+                        <div>
+                            <h3>2. Separate observation from diagnosis</h3>
+                            <p>Metric cards answered what changed. Detailed pages answered where it happened, why it happened, and which segment or payment method was affected.</p>
+                        </div>
+                        <div>
+                            <h3>3. Make time and comparison persistent</h3>
+                            <p>Global date and frequency controls helped users compare trends consistently across payments, revenue, fraud, and customer behavior.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Payments and Conversion</h2>
+                    <p>The payments page needed to expose the path from sale intent to approved payment. I designed the conversion funnel to show where transaction value moved through no-3DS, 3DS passed, authentication, approval, decline, blocked, and abandoned states.</p>
+                    <p>This view was important because approval rate alone can hide the real problem. A decline may be caused by authentication, issuer behavior, fraud rules, payment method mix, or geography. The design helped users locate the loss point before jumping to a solution.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/mockup/payments-funnel.png" loading="lazy" alt="Payment conversion funnel visualization from sales to approved, declined, blocked, and abandoned states">
+                            <figcaption>The conversion funnel translated payment operations into a visible journey from intent to outcome.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/mockup/geographic-distribution.png" loading="lazy" alt="Geographic payment distribution with country ranking and global map">
+                            <figcaption>Geographic distribution helped teams compare payment volume and issuer behavior by market.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Customer and Product Intelligence</h2>
+                    <p>For many businesses, payment performance only becomes actionable when it connects to customer and product behavior. I designed the customer and product section around three analytical modes: customer overview, customer clusters, and product performance.</p>
+                    <p>The cluster view helped users compare high-value customers, loyal frequent buyers, price-conscious buyers, new explorers, and dormant customers. This shifted the product from reporting what happened to helping teams decide where to focus retention, pricing, and optimization effort.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/UI/Customer overview.png" loading="lazy" alt="Customer overview page with cohort retention and customer acquisition analysis">
+                            <figcaption>Cohort and retention analysis connected payment health to customer lifecycle behavior.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/mockup/customer-clusters.png" loading="lazy" alt="Customer segmentation clusters based on spending patterns and purchase frequency">
+                            <figcaption>Customer clusters made behavioral segments visible through both scatterplot patterns and segment summaries.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Revenue and Fraud Views</h2>
+                    <p>Revenue and fraud needed different interaction patterns. Revenue required trend clarity, repeat purchase signals, and GMV context. Fraud required thresholds, dispute and chargeback metrics, breakdowns by payment method or country, and a table for operational review.</p>
+                    <p>I kept these pages visually consistent while allowing each domain to express the metrics that mattered. This made the product feel coherent without flattening payment, revenue, and risk into the same generic dashboard template.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/UI/Revenue.png" loading="lazy" alt="Revenue analytics page with GMV trend and repeat purchase rate">
+                            <figcaption>The revenue page focused on GMV, revenue movement, and repeat purchase behavior over time.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/fintech/UI/Fraud.png" loading="lazy" alt="Fraud analytics page with fraud loss metrics and fraud breakdowns">
+                            <figcaption>The fraud page separated financial loss, detection metrics, and breakdowns for risk-oriented decision making.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2>Reports as a Trust Layer</h2>
+                    <p>For a fintech AI product, trust also comes from documentation. I designed reports as a recurring artifact that captured payment performance, AI insights, optimization suggestions, and action items. This gave teams a way to review decisions outside the dashboard and share performance narratives with stakeholders.</p>
+                    <figure class="case-figure">
+                        <img src="imgs/fintech/UI/Reports.png" loading="lazy" alt="Reports page with searchable monthly and weekly AI payment reports">
+                        <figcaption>Reports turned ongoing AI analysis into a shareable operating cadence.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2>Outcome</h2>
+                    <p>The final design positioned Corgi Labs as a payments intelligence system rather than a generic analytics dashboard. The experience connected setup, model qualification, business health, payment funnel analysis, customer segmentation, revenue trends, fraud monitoring, and AI-generated reports into one coherent product journey.</p>
+                    <p>The strongest product shift was structural: different business types could enter through different value paths, while the platform maintained one consistent language for insight, diagnosis, and action.</p>
+                    <div class="case-outcome-grid">
+                        <div>
+                            <span>Clearer product value</span>
+                            <p>Translated complex payment data into revenue, fraud, optimization, and system-health decisions.</p>
+                        </div>
+                        <div>
+                            <span>Higher trust in AI</span>
+                            <p>Made model eligibility, data sync, training, and readiness visible before asking users to rely on recommendations.</p>
+                        </div>
+                        <div>
+                            <span>Scalable IA</span>
+                            <p>Created a modular navigation model that can support new payment controls, AI features, and reporting workflows.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <footer>
-                <p class="copyr">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
+                <p class="copyr" data-i18n="common.footer">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
             </footer>
         </div>
         <!-- /#page-content-wrapper -->

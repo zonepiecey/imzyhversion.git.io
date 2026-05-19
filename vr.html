@@ -6,6 +6,7 @@
     <title>Explore_Lumi</title>
     <meta name="author" content="Ying Zhang" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="imgs/logo_1.svg" type="image/png">
@@ -23,6 +24,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+        <script src="js/locales.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/language-toggle.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
@@ -41,53 +45,56 @@
         <!-- Sidebar -->
         <div id="sidebarWrapper">
             <div id="home" class="sidebar-link"><a id="arrow" href="index.html"> &ltrif;</a><a id="hometext"
-                    href="index.html">HOME</a></div>
+                    href="index.html" data-i18n="nav.home">HOME</a></div>
             <div class="label">
-                <span class="labelWork">Work</span>
+                <span class="labelWork" data-i18n="nav.work">Work</span>
             </div>
             <ul class="sidebar-nav">
 
                 <li>
                     <a class="prolist" href="fintech-ai.html">
                         <div class="dot dot5"></div>
-                        <p class="protitle protitle9">Fintech AI</p>
-                        <p class="time">2025-Now</p>
+                        <p class="protitle protitle9">CorgiLabs</p>
+                        <p class="time">Fintech AI</p>
                     </a>
                 </li>
                 <li>
-                    <a class="prolist" href="pwc.html">
+                    <a class="prolist" href="pwc-capadmin.html">
                         <div class="dot dot2"></div>
-                        <p class="protitle protitle9">PwC</p>
-                        <p class="time">2021-2024</p>
+                        <p class="protitle protitle9" data-i18n="nav.capadmin">CapAdmin</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-chatgpt.html">
+                        <div class="dot dot6"></div>
+                        <p class="protitle protitle9" data-i18n="nav.chatgpt">ChatGPT++</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-talent-exchange.html">
+                        <div class="dot dot7"></div>
+                        <p class="protitle protitle9" data-i18n="nav.talent">Talent Exchange</p>
+                        <p class="time">Enterprise</p>
                     </a>
                 </li>
                 <li>
                     <a class="prolist" href="veer.html">
                         <div class="dot dot1"></div>
-                        <p class="protitle protitle3">Veer</p>
-                        <p class="time">2018-2020</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="prolist" href="apple.html">
-                        <div class="dot dot3"></div>
-                        <p class="protitle protitle9">Apple</p>
-                        <p class="time">2017-2018</p>
+                        <p class="protitle protitle3" data-i18n="nav.veer">Veer</p>
+                        <p class="time">VR</p>
                     </a>
                 </li>
                 <li>
                     <a class="prolist" href="vr.html">
                         <div class="dot dot4"></div>
-                        <p class="protitle protitle1">Explore</p>
-                        <p class="time">&infin;</p>
+                        <p class="protitle protitle1" data-i18n="nav.explore">Explore</p>
+                        <p class="time">Lab</p>
                     </a>
                 </li>
-                <li>
-                    <!-- <a class="prolist" href="coding.php"><div class="dot dot5"></div><p class="protitle protitle2">Coding</p></a> -->
-                </li>
-                </li>
             </ul>
-            <div id="about" class="sidebar-link"><a href="about.html">ABOUT</a></div>
+            <div id="about" class="sidebar-link"><a href="about.html" data-i18n="nav.about">ABOUT</a></div>
         </div>
         <div class="prooverlay"></div>
         <!-- /#sidebarWrapper -->
@@ -98,7 +105,8 @@
                 <p class="header-title">Explore</p>
             </div>
 
-            <div class="content-section">
+            <div class="content-section legacy-case-page">
+                <p class="case-eyebrow">Explore | VR | Selected Works</p>
                 <h1>Virtual Reallity Projects</h1>
                 <p>I'm a big fan of the way that VR can already enhance lives far beyond a mere gaming experience. I've
                     been designing for VR since 2017. Here are some projects I have done.</p>
@@ -166,7 +174,8 @@
 
                 <!-- /#page-content-wrapper -->
             </div>
-            <div class="content-section">
+            <div class="content-section legacy-case-page">
+                <p class="case-eyebrow">Explore | Code | Selected Works</p>
                 <h1>Design + Code</h1>
                 <!-- <h2>ABSTRACT</h2> -->
                 <p class="p">The very first programming languages I learned was HTML, CSS and Javascript. When I was
@@ -211,7 +220,8 @@
 
 
             </div>
-            <div class="content-section">
+            <div class="content-section legacy-case-page">
+                <p class="case-eyebrow">Explore | UX/UI | Selected Works</p>
                 <h1>UX UI Works</h1>
                 <p class="p">To showcase some of my UX/UI works, mostly has been done during my master's study.
                     I use
@@ -249,7 +259,7 @@
                 </div>
             </div>
             <footer>
-                <p class="copyr">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
+                <p class="copyr" data-i18n="common.footer">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
             </footer>
             <script>
                 const columnCount = 6;

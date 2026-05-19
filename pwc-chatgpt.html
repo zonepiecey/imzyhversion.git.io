@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPTPlusPlus_Lumi</title>
+    <meta name="author" content="Ying Zhang" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="imgs/logo_1.svg" type="image/png">
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+        <script src="js/locales.js"></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/language-toggle.js" defer></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-285GS6SF4R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-285GS6SF4R');
+    </script>
+
+    <style>
+        .proimg {
+            border: 0.5px solid #dddddd;
+        }
+    </style>
+</head>
+
+<body onload="PageLoader()">
+    <div id="wrapper">
+        <div id="sidebarWrapper">
+            <div id="home" class="sidebar-link"><a id="arrow" href="index.html"> &ltrif;</a><a id="hometext"
+                    href="index.html" data-i18n="nav.home">HOME</a></div>
+            <div class="label">
+                <span class="labelWork" data-i18n="nav.work">Work</span>
+            </div>
+            <ul class="sidebar-nav">
+                <li>
+                    <a class="prolist" href="fintech-ai.html">
+                        <div class="dot dot5"></div>
+                        <p class="protitle protitle9">CorgiLabs</p>
+                        <p class="time">Fintech AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-capadmin.html">
+                        <div class="dot dot2"></div>
+                        <p class="protitle protitle9" data-i18n="nav.capadmin">CapAdmin</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-chatgpt.html">
+                        <div class="dot dot6"></div>
+                        <p class="protitle protitle9" data-i18n="nav.chatgpt">ChatGPT++</p>
+                        <p class="time">Enterprise AI</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="pwc-talent-exchange.html">
+                        <div class="dot dot7"></div>
+                        <p class="protitle protitle9" data-i18n="nav.talent">Talent Exchange</p>
+                        <p class="time">Enterprise</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="veer.html">
+                        <div class="dot dot1"></div>
+                        <p class="protitle protitle3" data-i18n="nav.veer">Veer</p>
+                        <p class="time">VR</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="prolist" href="vr.html">
+                        <div class="dot dot4"></div>
+                        <p class="protitle protitle1" data-i18n="nav.explore">Explore</p>
+                        <p class="time">Lab</p>
+                    </a>
+                </li>
+            </ul>
+            <div id="about" class="sidebar-link"><a href="about.html" data-i18n="nav.about">ABOUT</a></div>
+        </div>
+
+        <div class="prooverlay"></div>
+        <div id="loader"><span class="loader-inner"></span></div>
+
+        <div id="page-content-wrapper" style="display:none;">
+            <div class="fixheader">
+                <p class="header-title" data-i18n="chatgpt.header">CHATGPT++</p>
+            </div>
+
+            <div class="content-section case-study-page">
+                <section class="case-hero">
+                    <p class="case-eyebrow" data-i18n="chatgpt.eyebrow">PwC | Enterprise Generative AI | Product Design Lead</p>
+                    <h1 data-i18n="chatgpt.title">PwC ChatGPT++</h1>
+                    <p class="case-lede" data-i18n="chatgpt.lede">I designed an enterprise AI workspace that moved ChatGPT++ beyond a simple chat interface into a governed platform for reusable prompts, team collaboration, role-based plugins, and client-specific workspace configuration.</p>
+                    <div class="case-meta-grid">
+                        <div>
+                            <span data-i18n="common.role">Role</span>
+                            <strong data-i18n="chatgpt.roleValue">Lead Product Designer</strong>
+                        </div>
+                        <div>
+                            <span data-i18n="common.domain">Domain</span>
+                            <strong data-i18n="chatgpt.domainValue">Enterprise generative AI, collaboration, workflow tooling</strong>
+                        </div>
+                        <div>
+                            <span data-i18n="common.users">Users</span>
+                            <strong data-i18n="chatgpt.usersValue">Consultants, business users, admins, plugin contributors</strong>
+                        </div>
+                        <div>
+                            <span data-i18n="common.scope">Scope</span>
+                            <strong data-i18n="chatgpt.scopeValue">Product strategy, IA, key workflows, UI system, handoff</strong>
+                        </div>
+                    </div>
+                    <figure class="case-figure case-figure-wide">
+                        <img src="imgs/pwc/chatgpt/Home-Updated.png" loading="lazy" alt="ChatGPT++ home workspace with templates, plugins, and team spaces">
+                        <figcaption data-i18n="chatgpt.figHome">The redesigned home experience made ChatGPT++ feel like an enterprise AI workspace, not just a chat page.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.problemTitle">The Problem</h2>
+                    <p data-i18n="chatgpt.problemP1">Early enterprise GenAI adoption created a familiar pattern: everyone wanted the speed of conversational AI, but teams quickly needed more than an open text box. Users needed reusable prompts, trusted plugins, team spaces, admin controls, and client-specific configuration. Without structure, the product risked becoming a scattered collection of chats, templates, and experimental AI tools.</p>
+                    <p data-i18n="chatgpt.problemP2">The design challenge was to preserve the immediacy of chat while introducing the control, reuse, and governance expected in a professional services environment.</p>
+                    <div class="case-insight-grid">
+                        <div>
+                            <span>01</span>
+                            <h3 data-i18n="chatgpt.insight1Title">Chat alone did not scale</h3>
+                            <p data-i18n="chatgpt.insight1Text">Users could generate useful outputs, but valuable workflows were hard to repeat, share, version, or standardize across teams.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <h3 data-i18n="chatgpt.insight2Title">AI needed business context</h3>
+                            <p data-i18n="chatgpt.insight2Text">Prompts, examples, files, plugins, and client/team settings had to become visible inputs rather than hidden user behavior.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <h3 data-i18n="chatgpt.insight3Title">Governance had to feel usable</h3>
+                            <p data-i18n="chatgpt.insight3Text">Role permissions, plugin modes, and team access controls were necessary, but they had to fit naturally into the flow of work.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.strategyTitle">Product Strategy</h2>
+                    <p data-i18n="chatgpt.strategyP1">I reframed ChatGPT++ as a layered workspace with four connected surfaces: private productivity, team collaboration, reusable templates, and a plugin ecosystem. This gave the product a clearer mental model: users could start with a simple chat, then add structured prompts, activate business plugins, and move work into team spaces when collaboration or governance mattered.</p>
+                    <p data-i18n="chatgpt.strategyP2">The design principle was progressive structure. Simple tasks should still feel fast, while higher-stakes workflows should reveal the right controls at the right moment.</p>
+                    <figure class="case-figure">
+                        <img src="imgs/pwc/chatgpt/Main Playground-Revised.png" loading="lazy" alt="ChatGPT++ main playground with plugin controls and chat response actions">
+                        <figcaption data-i18n="chatgpt.figPlayground">The main playground kept the chat flow central while adding plugin selection, response actions, template entry points, and side navigation.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.onboardingTitle">Onboarding and Workspace Setup</h2>
+                    <p data-i18n="chatgpt.onboardingP1">The first-time experience needed to explain that ChatGPT++ could be customized for a client's operating context. I designed onboarding around configuration tasks that matter in enterprise deployment: login, client information, branding, domain setup, and initial workspace entry.</p>
+                    <p data-i18n="chatgpt.onboardingP2">This turned onboarding from a generic welcome screen into a product setup flow. The goal was to make the platform feel ownable by each team while keeping the setup lightweight enough for business users.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/First-time Login Navigation-01.png" loading="lazy" alt="ChatGPT++ first-time login navigation and workspace customization flow">
+                            <figcaption data-i18n="chatgpt.figOnboarding1">First-time navigation framed customization as a guided setup rather than an admin-only task.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Clients' Login-With Client Information Customization.png" loading="lazy" alt="ChatGPT++ client login screen with branded customization">
+                            <figcaption data-i18n="chatgpt.figOnboarding2">Client-specific branding and information helped the platform adapt to different deployment contexts.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.iaTitle">Information Architecture</h2>
+                    <p data-i18n="chatgpt.iaP1">The navigation model separated personal work, team work, templates, plugins, documents, and support. This was important because enterprise AI work moves between modes: a user may draft privately, reuse a template, invoke a plugin, share with a team, or manage access for others.</p>
+                    <p data-i18n="chatgpt.iaP2">I used the side navigation as the product's spine. It gave users a stable map while allowing each team or domain to expose its own assistants, templates, and shared workspaces.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Side Navigation Bar optimization and Display Revision.png" loading="lazy" alt="ChatGPT++ side navigation optimization showing private space and chat categories">
+                            <figcaption data-i18n="chatgpt.figIa1">The side navigation balanced private work, reusable assets, and domain-specific chat assistants.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Side Navigation Bar optimization and Display Revision-Template Hyperlink.png" loading="lazy" alt="ChatGPT++ side navigation with template hyperlink treatment">
+                            <figcaption data-i18n="chatgpt.figIa2">Template access was treated as part of the working environment instead of a separate back-office library.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.templatesTitle">Reusable Prompt Templates</h2>
+                    <p data-i18n="chatgpt.templatesP1">One of the biggest opportunities was turning good prompt behavior into a reusable product pattern. Instead of asking every user to learn prompt engineering, the template builder translated prompt structure into guided fields: context, purpose, AI role, tone, required format, example files, plugins, and confirmation.</p>
+                    <p data-i18n="chatgpt.templatesP2">This reduced the gap between expert users and everyday business users. It also made prompts easier to review, share, and govern because the important ingredients were explicit.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Template-Updated-With Example-Step 1 [Further Version].png" loading="lazy" alt="ChatGPT++ template builder with guided prompt fields and example attachment">
+                            <figcaption data-i18n="chatgpt.figTemplate1">The template builder converted prompt craft into structured inputs users could understand and repeat.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Template-Updated-Step 2.png" loading="lazy" alt="ChatGPT++ template confirmation step with embedded plugins and upload setting">
+                            <figcaption data-i18n="chatgpt.figTemplate2">The confirmation step made reusable prompt metadata, embedded plugins, and sharing state visible before publishing.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.pluginsTitle">Plugin Ecosystem</h2>
+                    <p data-i18n="chatgpt.pluginsP1">Plugins were the bridge between general-purpose chat and business-specific action. I designed the plugin library around two distinct modes: consumers who install and use approved plugins, and contributors who create, update, and submit plugin assets.</p>
+                    <p data-i18n="chatgpt.pluginsP2">This role split was critical. Business users needed a simple store-like discovery experience, while contributors needed versioning, status, and clearer publishing controls. Treating those as different experiences helped the platform support scale without overwhelming either audience.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Central Hub-Plugin Libary-Plugin Consumers (Business Users).png" loading="lazy" alt="ChatGPT++ plugin library consumer mode with plugin cards">
+                            <figcaption data-i18n="chatgpt.figPlugin1">Consumer mode emphasized search, categories, availability, and fast installation of approved plugins.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Central Hub-Plugin Libary-Plugin Contributor.png" loading="lazy" alt="ChatGPT++ plugin library contributor mode with version and status states">
+                            <figcaption data-i18n="chatgpt.figPlugin2">Contributor mode exposed version, active, pending, and declined states so plugin ownership could be managed responsibly.</figcaption>
+                        </figure>
+                    </div>
+                    <figure class="case-figure case-figure-wide">
+                        <img src="imgs/pwc/chatgpt/Plugin Trigger.png" loading="lazy" alt="ChatGPT++ plugin trigger inside a chat workflow">
+                        <figcaption data-i18n="chatgpt.figPluginTrigger">Inside chat, plugin activation became contextual: users could trigger a workflow while staying inside the conversation.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.workflowTitle">Workflow Example</h2>
+                    <p data-i18n="chatgpt.workflowP1">To test how plugins should behave inside the chat experience, I designed an earning transcript workflow. The plugin guided users through file upload, structured instructions, and continuation back to chat. This pattern clarified that plugins were not static cards; they were task-specific extensions of the conversation.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Plugin for Earning Transcripts Application-02 Solution-01 Step.png" loading="lazy" alt="ChatGPT++ earning transcript plugin first step with upload instructions">
+                            <figcaption data-i18n="chatgpt.figWorkflow1">The plugin introduced task requirements directly inside the AI response stream.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Plugin for Earning Transcripts Application-02 Solution-02 Step.png" loading="lazy" alt="ChatGPT++ earning transcript plugin workflow with file attachment">
+                            <figcaption data-i18n="chatgpt.figWorkflow2">The workflow kept plugin state, file input, and return-to-chat behavior visible in one interface.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.teamTitle">Team Collaboration</h2>
+                    <p data-i18n="chatgpt.teamP1">Enterprise AI work often becomes collaborative once it touches a client, a delivery team, or a shared knowledge domain. I designed team spaces so users could create group chats, manage membership, assign roles, and control template access without leaving the product's core environment.</p>
+                    <p data-i18n="chatgpt.teamP2">The team model helped ChatGPT++ move from individual experimentation to shared operational use. It also created a foundation for permissioning, shared assistants, and domain-specific AI resources.</p>
+                    <div class="case-two-up">
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Create Group Chat-Updated.png" loading="lazy" alt="ChatGPT++ create new team flow">
+                            <figcaption data-i18n="chatgpt.figTeam1">Creating a team combined group chat setup with discoverability, domain categorization, and member selection.</figcaption>
+                        </figure>
+                        <figure class="case-figure">
+                            <img src="imgs/pwc/chatgpt/Team Member-Updated.png" loading="lazy" alt="ChatGPT++ team member management table with roles and access templates">
+                            <figcaption data-i18n="chatgpt.figTeam2">Team member management used table density for role, group, access, status, and bulk-edit operations.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.decisionsTitle">Key Design Decisions</h2>
+                    <div class="case-decision-list">
+                        <div>
+                            <h3 data-i18n="chatgpt.decision1Title">1. Keep chat as the anchor, not the whole product</h3>
+                            <p data-i18n="chatgpt.decision1Text">The chat interface remained the fastest path to value, but templates, plugins, documents, and team spaces gave it enterprise structure.</p>
+                        </div>
+                        <div>
+                            <h3 data-i18n="chatgpt.decision2Title">2. Turn prompt engineering into guided composition</h3>
+                            <p data-i18n="chatgpt.decision2Text">Template fields made high-quality prompting repeatable and reviewable, reducing dependence on individual prompt-writing skill.</p>
+                        </div>
+                        <div>
+                            <h3 data-i18n="chatgpt.decision3Title">3. Split plugin consumption from plugin contribution</h3>
+                            <p data-i18n="chatgpt.decision3Text">Different users needed different affordances. Consumers needed trust and discovery; contributors needed publishing, versioning, and lifecycle states.</p>
+                        </div>
+                        <div>
+                            <h3 data-i18n="chatgpt.decision4Title">4. Make governance part of the workflow</h3>
+                            <p data-i18n="chatgpt.decision4Text">Roles, permissions, upload settings, plugin states, and team access were surfaced where decisions happened instead of hidden in settings.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h2 data-i18n="chatgpt.outcomeTitle">Outcome</h2>
+                    <p data-i18n="chatgpt.outcomeP1">The final design gave ChatGPT++ a scalable product architecture: private and team workspaces, guided templates, plugin discovery, contributor workflows, contextual plugin triggers, client customization, and access management. It turned a generic GenAI interaction into a professional workspace that could support repeatable business use cases.</p>
+                    <p data-i18n="chatgpt.outcomeP2">The strongest design outcome was not only the individual screens. It was the operating model: ChatGPT++ could now absorb new templates, plugins, client configurations, and team structures without asking users to relearn the product every time.</p>
+                    <div class="case-outcome-grid">
+                        <div>
+                            <span data-i18n="chatgpt.outcome1Label">Reusable AI work</span>
+                            <p data-i18n="chatgpt.outcome1Text">Converted one-off prompts into templates and plugin-assisted workflows that teams could repeat and share.</p>
+                        </div>
+                        <div>
+                            <span data-i18n="chatgpt.outcome2Label">Enterprise trust</span>
+                            <p data-i18n="chatgpt.outcome2Text">Made role, permission, publishing, and plugin status decisions visible in the main product experience.</p>
+                        </div>
+                        <div>
+                            <span data-i18n="chatgpt.outcome3Label">Platform scale</span>
+                            <p data-i18n="chatgpt.outcome3Text">Created a modular structure for adding new clients, domains, teams, templates, and plugins over time.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <p class="copyr" data-i18n="common.footer">2024 © Crafted in Shanghai by Lumi Zhang - All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const sidebar = document.getElementById("sidebarWrapper");
+        const links = document.querySelectorAll(".sidebar-link");
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("hovered");
+            });
+        });
+
+        sidebar.addEventListener("mouseenter", () => {
+            sidebar.classList.add("hovered");
+        });
+
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.classList.remove("hovered");
+        });
+    </script>
+</body>
+
+</html>
